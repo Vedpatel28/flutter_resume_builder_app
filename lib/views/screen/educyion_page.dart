@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
 
+// ignore: camel_case_types
 class educyion_page extends StatefulWidget {
   const educyion_page({Key? key}) : super(key: key);
 
@@ -9,6 +10,7 @@ class educyion_page extends StatefulWidget {
   State<educyion_page> createState() => _educyion_pageState();
 }
 
+// ignore: camel_case_types
 class _educyion_pageState extends State<educyion_page> {
   @override
   Widget build(BuildContext context) {
@@ -16,14 +18,18 @@ class _educyion_pageState extends State<educyion_page> {
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
-            onTap: () {
-              setState(() {
-                Navigator.of(context).pop();
-              });
-            },
-            child: backicon),
+          onTap: () {
+            setState(() {
+              Navigator.of(context).pop();
+            });
+          },
+          child: backicon,
+        ),
         toolbarHeight: s.height * 0.15,
-        title: Text("Educyion", style: AppBarTitile),
+        title: Text(
+          "Educyion",
+          style: AppBarTitile,
+        ),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
