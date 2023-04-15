@@ -12,6 +12,7 @@ class peronal_details_page extends StatefulWidget {
 
 // ignore: camel_case_types
 class _peronal_details_pageState extends State<peronal_details_page> {
+
   bool chackboxone = false;
   bool chackboxtwo = false;
   bool chackboxthree = false;
@@ -86,6 +87,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                     },
                   ),
                   // Married
+                  Text("Languages Known", style: titeltext),
                   RadioListTile(
                     value: "Married",
                     title: const Text(
@@ -103,10 +105,8 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                       );
                     },
                   ),
-                  Text("Languages Known", style: titeltext),
                   CheckboxListTile(
                     title: const Text("English"),
-                    controlAffinity: ListTileControlAffinity.leading,
                     value: chackboxone,
                     onChanged: (val) {
                       setState(
@@ -118,7 +118,6 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                   ),
                   CheckboxListTile(
                     title: const Text("Hindi"),
-                    controlAffinity: ListTileControlAffinity.leading,
                     value: chackboxtwo,
                     onChanged: (vale) {
                       setState(
@@ -131,7 +130,6 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                   CheckboxListTile(
                     value: chackboxthree,
                     title: const Text("Gujarati"),
-                    controlAffinity: ListTileControlAffinity.leading,
                     onChanged: (value) {
                       setState(
                         () {
@@ -141,7 +139,6 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                     },
                   ),
                   Text("Nationality", style: titeltext),
-                  SizedBox(height: s.height * 0.01),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -157,16 +154,12 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                   SizedBox(height: s.height * 0.04),
                   Row(
                     children: [
-                      SizedBox(width: s.width * 0.23),
+                      SizedBox(width: s.width*0.23),
                       GestureDetector(
-                        onTap: () {
-                          setState(
-                            () {},
-                          );
-                        },
+                        onTap: () {setState(() {},);},
                         child: Container(
                           height: s.height * 0.05,
-                          width: s.width * 0.3,
+                          width: s.width*0.3,
                           decoration: const BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.all(

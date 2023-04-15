@@ -19,14 +19,7 @@ class _experiences_pageState extends State<experiences_page> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-            onTap: () {
-              setState(() {
-                Navigator.of(context).pop();
-              });
-            },
-            child: backicon),
-        toolbarHeight: s.height * 0.15,
+        leading: backicon,
         title: Text("Experiences", style: AppBarTitile),
         centerTitle: true,
         backgroundColor: Colors.blue,
