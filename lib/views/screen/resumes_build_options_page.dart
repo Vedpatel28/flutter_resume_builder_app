@@ -18,7 +18,12 @@ class _resumes_build_options_pageState
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: backicon,
+        leading: GestureDetector(
+            onTap: () {
+              setState(() {
+                Navigator.of(context).pop();
+              });
+            },child: backicon),
         title: Text(
           "Resume Workspace",
           style: AppBarTitile,
