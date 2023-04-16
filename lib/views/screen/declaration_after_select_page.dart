@@ -12,7 +12,8 @@ class declaration_page_select extends StatefulWidget {
 }
 
 class _declaration_page_selectState extends State<declaration_page_select> {
-  bool onoffswi = true;
+
+  bool onoffswi = false;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +63,10 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                       onChanged: (value) {
                         setState(() {
                           onoffswi = value;
+                          if(onoffswi == false){
+                            Navigator.of(context).pushNamed(allroutes.selectdeclaration);
+                          }
+                          else{}
                         });
                       },
                     ),
@@ -142,7 +147,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                               "Place(Interview\nvenue/city)",
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
