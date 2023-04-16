@@ -52,7 +52,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                       height: s.height * 0.02,
                     ),
                     TextField(
-                      maxLines: 5,
+                      maxLines: 4,
                       decoration: InputDecoration(
                         hintText: "Descripation",
                         hintStyle: TextStyle(
@@ -93,7 +93,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                       "Current Designation (Experirnced\nCandidate ",
                       style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 20,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -101,11 +101,10 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                       height: s.height * 0.02,
                     ),
                     TextField(
-                      maxLines: 1,
                       decoration: InputDecoration(
                         hintText: "Software Engineer",
                         hintStyle: TextStyle(
-                            color: Colors.grey.shade400, fontSize: 20),
+                            color: Colors.grey.shade400, fontSize: 16),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey.shade300),
                         ),

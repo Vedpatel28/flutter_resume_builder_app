@@ -35,7 +35,7 @@ class _references_pageState extends State<references_page> {
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Container(
-          height: s.height * 0.5,
+          height: s.height * 0.55,
           width: s.width,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -43,55 +43,57 @@ class _references_pageState extends State<references_page> {
           ),
           child: Padding(
             padding: EdgeInsets.all(20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("References Name", style: titeltext),
-                SizedBox(height: s.height*0.02,),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    hintText: "Sures Shah",
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-                SizedBox(height: s.height*0.02,),
-                Text("Designation", style: titeltext),
-                SizedBox(height: s.height*0.02,),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    hintText: "Marketing Manager,ID-54686",
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("References Name", style: titeltext),
+                  SizedBox(height: s.height*0.02,),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      hintText: "Sures Shah",
+                      hintStyle: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height*0.02,),
-                Text("Organization/institute", style: titeltext),
-                SizedBox(height: s.height*0.02,),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    hintText: "Green Energy pvt.Ltd",
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
+                  SizedBox(height: s.height*0.02,),
+                  Text("Designation", style: titeltext),
+                  SizedBox(height: s.height*0.02,),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      hintText: "Marketing Manager,ID-54686",
+                      hintStyle: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  SizedBox(height: s.height*0.02,),
+                  Text("Organization/institute", style: titeltext),
+                  SizedBox(height: s.height*0.02,),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      hintText: "Green Energy pvt.Ltd",
+                      hintStyle: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

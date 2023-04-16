@@ -37,7 +37,7 @@ class _educyion_pageState extends State<educyion_page> {
         padding: EdgeInsets.all(20),
         child: Container(
           padding: EdgeInsets.all(20),
-          height: s.height * 0.6,
+          height: s.height * 0.66,
           width: s.width,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -45,69 +45,71 @@ class _educyion_pageState extends State<educyion_page> {
           ),
           child: Padding(
             padding: const EdgeInsets.all(5),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Course/Degree",
-                  style: titeltext,
-                ),
-                SizedBox(height: s.height * 0.01),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    hintText: "B.Tech Information Technology",
-                    hintStyle: TextStyle(
-                      fontSize: 18,
-                      color: Colors.grey.shade400,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Course/Degree",
+                    style: titeltext,
+                  ),
+                  SizedBox(height: s.height * 0.01),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      hintText: "B.Tech Information Technology",
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey.shade400,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height * 0.01),
-                Text("School/College/Institute", style: titeltext),
-                SizedBox(height: s.height * 0.01),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: "Bhagavan Mahavir University",
-                    hintStyle: TextStyle(
-                      fontSize: 18,
-                      color: Colors.grey.shade400,
+                  SizedBox(height: s.height * 0.01),
+                  Text("School/College/Institute", style: titeltext),
+                  SizedBox(height: s.height * 0.01),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Bhagavan Mahavir University",
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey.shade400,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height * 0.01),
-                Text("School/College/Institute", style: titeltext),
-                SizedBox(height: s.height * 0.01),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: "70% (or) 7.0 CGPA",
-                    hintStyle: TextStyle(
-                      fontSize: 18,
-                      color: Colors.grey.shade400,
+                  SizedBox(height: s.height * 0.01),
+                  Text("School/College/Institute", style: titeltext),
+                  SizedBox(height: s.height * 0.01),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "70% (or) 7.0 CGPA",
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey.shade400,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height * 0.01),
-                Text(
-                  "Year Of Pass",
-                  style: titeltext,
-                ),
-                SizedBox(height: s.height * 0.01),
-                TextField(
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: "2019",
-                    hintStyle: TextStyle(
-                      color: Colors.grey.shade400,
+                  SizedBox(height: s.height * 0.01),
+                  Text(
+                    "Year Of Pass",
+                    style: titeltext,
+                  ),
+                  SizedBox(height: s.height * 0.01),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      hintText: "2019",
+                      hintStyle: TextStyle(
+                        color: Colors.grey.shade400,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

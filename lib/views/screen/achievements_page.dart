@@ -43,59 +43,61 @@ class _achievements_pageState extends State<achievements_page> {
           ),
           child: Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: s.height*0.02,),
-                const Text(
-                  "Enter Achievements",
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: s.height*0.03,),
-                const TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 20),
-                    hintText: "Exceeded sales 17% average",
-                    hintStyle: TextStyle(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: s.height*0.02,),
+                  const Text(
+                    "Enter Achievements",
+                    style: TextStyle(
+                      fontSize: 22,
                       color: Colors.grey,
-                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-                SizedBox(height: s.height*0.02,),
-                const TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 20),
-                    hintText: "Exceeded sales 17% average",
-                    hintStyle: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
+                  SizedBox(height: s.height*0.03,),
+                  const TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20),
+                      hintText: "Exceeded sales 17% average",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height*0.04,),
-                Container(
-                  height: s.height * 0.07,
-                  width: s.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
+                  SizedBox(height: s.height*0.02,),
+                  const TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20),
+                      hintText: "Exceeded sales 17% average",
+                      hintStyle: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: s.height*0.04,),
+                  Container(
+                    height: s.height * 0.06,
+                    width: s.width,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                        width: 2,
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.add,
                       color: Colors.grey.shade300,
-                      width: 2,
+                      size: s.height * 0.05,
                     ),
                   ),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.grey.shade300,
-                    size: s.height * 0.05,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

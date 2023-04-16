@@ -46,59 +46,61 @@ class _technical_skills_pageState extends State<technical_skills_page> {
           ),
           child: Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: s.height*0.02,),
-                Text(
-                  "Enter Your Skills",
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: s.height*0.03,),
-                TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 20),
-                    hintText: "C Programming, Web Technical",
-                    hintStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: s.height*0.02,),
+                  Text(
+                    "Enter Your Skills",
+                    style: TextStyle(
+                      fontSize: 22,
                       color: Colors.grey,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-                SizedBox(height: s.height*0.02,),
-                TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 20),
-                    hintText: "C Programming, Web Technical",
-                    hintStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey,
+                  SizedBox(height: s.height*0.03,),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20),
+                      hintText: "C Programming, Web Technical",
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: s.height*0.04,),
-                Container(
-                  height: s.height * 0.07,
-                  width: s.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
+                  SizedBox(height: s.height*0.02,),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20),
+                      hintText: "C Programming, Web Technical",
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: s.height*0.04,),
+                  Container(
+                    height: s.height * 0.056,
+                    width: s.width,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                        width: 2,
+                      ),
+                    ),
+                    child: Icon(
+                      Icons.add,
                       color: Colors.grey.shade300,
-                      width: 2,
+                      size: s.height * 0.05,
                     ),
                   ),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.grey.shade300,
-                    size: s.height * 0.05,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
