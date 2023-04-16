@@ -29,95 +29,97 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Container(
-              height: s.height * 0.3,
-              width: s.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Career Objective",
-                      style: titeltext,
-                    ),
-                    SizedBox(
-                      height: s.height * 0.02,
-                    ),
-                    TextField(
-                      maxLines: 4,
-                      decoration: InputDecoration(
-                        hintText: "Descripation",
-                        hintStyle: TextStyle(
-                          color: Colors.grey.shade400,
-                          fontSize: 22,
-                        ),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.grey.shade300,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: s.height * 0.3,
+                width: s.width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Career Objective",
+                        style: titeltext,
+                      ),
+                      SizedBox(
+                        height: s.height * 0.02,
+                      ),
+                      TextField(
+                        maxLines: 4,
+                        decoration: InputDecoration(
+                          hintText: "Descripation",
+                          hintStyle: TextStyle(
+                            color: Colors.grey.shade400,
+                            fontSize: 22,
+                          ),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey.shade300,
+                            ),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
                           ),
                         ),
-                        errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(3),
-                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: s.height * 0.02,
-            ),
-            Container(
-              height: s.height * 0.22,
-              width: s.width,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(5),
+              SizedBox(
+                height: s.height * 0.02,
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "Current Designation (Experirnced\nCandidate ",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      height: s.height * 0.02,
-                    ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "Software Engineer",
-                        hintStyle: TextStyle(
-                            color: Colors.grey.shade400, fontSize: 16),
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey.shade300),
-                        ),
-                        errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(3),
+              Container(
+                height: s.height * 0.22,
+                width: s.width,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Current Designation (Experirnced\nCandidate ",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: s.height * 0.02,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: "Software Engineer",
+                          hintStyle: TextStyle(
+                              color: Colors.grey.shade400, fontSize: 16),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.grey.shade300),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       backgroundColor: Colors.grey.shade300,

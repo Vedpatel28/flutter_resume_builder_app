@@ -52,7 +52,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: s.height*0.02,),
-                  Text(
+                  const Text(
                     "Enter Your Skills",
                     style: TextStyle(
                       fontSize: 22,
@@ -61,7 +61,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                     ),
                   ),
                   SizedBox(height: s.height*0.03,),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "C Programming, Web Technical",
@@ -72,7 +72,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                     ),
                   ),
                   SizedBox(height: s.height*0.02,),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "C Programming, Web Technical",
