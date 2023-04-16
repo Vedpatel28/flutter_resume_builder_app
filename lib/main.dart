@@ -13,6 +13,7 @@ import 'package:flutter_resume_builder_app/views/screen/technical_skills_page.da
 import 'views/screen/contact_info_page.dart';
 import 'views/screen/declaration_after_select_page.dart';
 import 'views/screen/home_page.dart';
+import 'views/screen/resume_finel_page.dart';
 import 'views/screen/resumes_build_options_page.dart';
 
 void main() {
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         allroutes.buildpage: (context) => const resumes_build_options_page(),
         allroutes.selectdeclaration: (context) =>
             const declaration_page_select(),
+        allroutes.finel: (context) => const resume_finel_page(),
         allroutes.buildoption[0].route: (context) => const contact_info_page(),
         allroutes.buildoption[1].route: (context) =>
             const carrier_objective_page(),

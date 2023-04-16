@@ -40,10 +40,19 @@ class _home_pageState extends State<home_page> {
             SizedBox(
               height: s.height * 0.1,
             ),
-            Image.asset(
-              iconePath + "open-cardboard-box.png",
-              height: s.height * 0.1,
-              color: Colors.indigo.shade500,
+            GestureDetector(
+              onTap: () {
+                setState(
+                  () {
+                    Navigator.of(context).pushNamed(allroutes.finel);
+                  },
+                );
+              },
+              child: Image.asset(
+                iconePath + "open-cardboard-box.png",
+                height: s.height * 0.1,
+                color: Colors.indigo.shade500,
+              ),
             ),
             SizedBox(
               height: s.height * 0.01,
