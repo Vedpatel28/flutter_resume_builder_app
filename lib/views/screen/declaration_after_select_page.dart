@@ -12,7 +12,7 @@ class declaration_page_select extends StatefulWidget {
 }
 
 class _declaration_page_selectState extends State<declaration_page_select> {
-  bool onoffswi = false;
+  bool onoffswi = true;
 
   @override
   Widget build(BuildContext context) {
