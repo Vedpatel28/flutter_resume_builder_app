@@ -17,6 +17,7 @@ class allroutes {
   static String home = '/';
   static String buildpage = 'resumes_build_options_page';
   static String contact = 'contact_info_page';
+  static String selectdeclaration = 'declaration_page_select';
   static List<Buildoption> buildoption = [
     Buildoption(icon: "${iconePath}contact-books.png", name: "Contact info", route: "contact_info_page"),
     Buildoption(icon: "${iconePath}briefcase.png", name: "Carrer objective", route: "carrier_objective_page.dart"),
