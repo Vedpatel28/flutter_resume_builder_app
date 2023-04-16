@@ -31,18 +31,23 @@ class MyApp extends StatelessWidget {
       routes: {
         allroutes.home: (context) => const home_page(),
         allroutes.buildpage: (context) => const resumes_build_options_page(),
-        allroutes.selectdeclaration : (context) => declaration_page_select(),
-        allroutes.buildoption[0].route : (context) => const contact_info_page(),
-        allroutes.buildoption[1].route : (context) => const carrier_objective_page(),
-        allroutes.buildoption[2].route : (context) => const peronal_details_page(),
-        allroutes.buildoption[3].route : (context) => const educyion_page(),
-        allroutes.buildoption[4].route : (context) => const experiences_page(),
-        allroutes.buildoption[5].route : (context) => const technical_skills_page(),
-        allroutes.buildoption[6].route : (context) => const interest_hobbies_page(),
-        allroutes.buildoption[7].route : (context) => const projects_page(),
-        allroutes.buildoption[8].route : (context) => const achievements_page(),
-        allroutes.buildoption[9].route : (context) => const references_page(),
-        allroutes.buildoption[10].route : (context) => const declaration_page(),
+        allroutes.selectdeclaration: (context) =>
+            const declaration_page_select(),
+        allroutes.buildoption[0].route: (context) => const contact_info_page(),
+        allroutes.buildoption[1].route: (context) =>
+            const carrier_objective_page(),
+        allroutes.buildoption[2].route: (context) =>
+            const peronal_details_page(),
+        allroutes.buildoption[3].route: (context) => const educyion_page(),
+        allroutes.buildoption[4].route: (context) => const experiences_page(),
+        allroutes.buildoption[5].route: (context) =>
+            const technical_skills_page(),
+        allroutes.buildoption[6].route: (context) =>
+            const interest_hobbies_page(),
+        allroutes.buildoption[7].route: (context) => const projects_page(),
+        allroutes.buildoption[8].route: (context) => const achievements_page(),
+        allroutes.buildoption[9].route: (context) => const references_page(),
+        allroutes.buildoption[10].route: (context) => const declaration_page(),
       },
     );
   }
