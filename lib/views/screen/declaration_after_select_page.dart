@@ -13,7 +13,7 @@ class declaration_page_select extends StatefulWidget {
 
 class _declaration_page_selectState extends State<declaration_page_select> {
 
-  bool onoffswi = false;
+  bool onoffswi = true;
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +63,6 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                       onChanged: (value) {
                         setState(() {
                           onoffswi = value;
-                          if(onoffswi == false){
-                            Navigator.of(context).pushNamed(allroutes.selectdeclaration);
-                          }
-                          else{}
                         });
                       },
                     ),

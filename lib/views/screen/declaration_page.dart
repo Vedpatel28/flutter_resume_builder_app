@@ -36,7 +36,7 @@ class _declaration_pageState extends State<declaration_page> {
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Container(
-          height: s.height*0.08,
+          height: s.height * 0.08,
           width: s.width,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -46,14 +46,21 @@ class _declaration_pageState extends State<declaration_page> {
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [
-                Text("Declaration",style: titeltext,),
+                Text(
+                  "Declaration",
+                  style: titeltext,
+                ),
                 const Spacer(),
-                Switch(value: onoffval, onChanged: (value) {
-                  setState(() {
-                    onoffval = value;
-                    Navigator.of(context).pushNamed(allroutes.selectdeclaration);
-                  });
-                },),
+                Switch(
+                  value: onoffval,
+                  onChanged: (value) {
+                    setState(() {
+                      onoffval = value;
+                      Navigator.of(context)
+                          .pushNamed(allroutes.selectdeclaration);
+                    });
+                  },
+                ),
               ],
             ),
           ),
