@@ -71,7 +71,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                   SizedBox(height: s.height * 0.01),
                   Icon(Icons.radar, size: s.height * 0.1),
                   SizedBox(height: s.height * 0.04),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -111,7 +111,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                                 ),
                               ),
                               Spacer(),
-                              TextField(
+                              TextFormField(
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
@@ -148,7 +148,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                                 ),
                               ),
                               Spacer(),
-                              TextField(
+                              TextFormField(
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),

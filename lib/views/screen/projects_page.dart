@@ -55,7 +55,7 @@ class _projects_pageState extends State<projects_page> {
                     "Project Title",
                     style: titeltext,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(s.height * 0.01),
                       hintText: "Resume Builder App",
@@ -115,7 +115,7 @@ class _projects_pageState extends State<projects_page> {
                     style: titeltext,
                   ),
                   SizedBox(height: s.height*0.001,),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(s.height * 0.01),
                       hintText: "Organize team members, Code analysis",
@@ -130,11 +130,12 @@ class _projects_pageState extends State<projects_page> {
                     "Technologies",
                     style: titeltext,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(s.height * 0.01),
                       hintText: "5 - Programmer",
-                      hintStyle: TextStyle(color: Colors.grey.shade400,fontSize: 20),
+                      hintStyle:
+                          TextStyle(color: Colors.grey.shade400, fontSize: 20),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
@@ -146,11 +147,12 @@ class _projects_pageState extends State<projects_page> {
                     style: titeltext,
                   ),
                   SizedBox(height: s.height * 0.001),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.all(s.height * 0.01),
                       hintText: "Enter Your Project Descripaton",
-                      hintStyle: TextStyle(color: Colors.grey.shade400,fontSize: 20),
+                      hintStyle:
+                          TextStyle(color: Colors.grey.shade400, fontSize: 20),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),

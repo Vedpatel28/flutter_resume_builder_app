@@ -51,7 +51,7 @@ class _experiences_pageState extends State<experiences_page> {
                     "Company Name",
                     style: titeltext,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -66,7 +66,7 @@ class _experiences_pageState extends State<experiences_page> {
                     style: titeltext,
                   ),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -80,7 +80,7 @@ class _experiences_pageState extends State<experiences_page> {
                     "Roles (optional)",
                     style: titeltext,
                   ),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -158,7 +158,7 @@ class _experiences_pageState extends State<experiences_page> {
                                 fontSize: 20,
                               ),
                             ),
-                            TextField(
+                            TextFormField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
@@ -189,7 +189,7 @@ class _experiences_pageState extends State<experiences_page> {
                                 fontSize: 20,
                               ),
                             ),
-                            TextField(
+                            TextFormField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
