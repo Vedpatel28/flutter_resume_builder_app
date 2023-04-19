@@ -63,6 +63,10 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                         onChanged: (value) {
                           setState(() {
                             onoffswi = value;
+                            value == false
+                                ? Navigator.of(context)
+                                    .pushNamed("declaration_page")
+                                : Navigator.of(context).pop();
                           });
                         },
                       ),

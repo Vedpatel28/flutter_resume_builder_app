@@ -402,7 +402,38 @@ class _contact_info_pageState extends State<contact_info_page> {
                         ),
                       ),
                       // photo index 1
-                      Container(),
+                      Container(
+                        height: s.height * 0.3,
+                        width: s.width,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        alignment: Alignment.center,
+                        child: Stack(
+                          children: [
+                            CircleAvatar(
+                              radius: s.height * 0.07,
+                              foregroundColor: Colors.grey,
+                              child: Align(
+                                alignment: Alignment(0.9, 0.9),
+                                child: Container(
+                                  height: s.height * 0.04,
+                                  width: s.width * 0.06,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.blue,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  alignment: AlignmentDirectional.center,
+                                  child: const Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(useMaterial3: true),
+      darkTheme: ThemeData(accentColor: Colors.teal),
       routes: {
         allroutes.home: (context) => const home_page(),
         allroutes.buildpage: (context) => const resumes_build_options_page(),
