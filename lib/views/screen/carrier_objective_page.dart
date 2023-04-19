@@ -52,7 +52,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                       SizedBox(
                         height: s.height * 0.02,
                       ),
-                      TextField(
+                      TextFormField(
                         maxLines: 4,
                         decoration: InputDecoration(
                           hintText: "Descripation",
@@ -101,7 +101,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
                       SizedBox(
                         height: s.height * 0.02,
                       ),
-                      TextField(
+                      TextFormField(
                         decoration: InputDecoration(
                           hintText: "Software Engineer",
                           hintStyle: TextStyle(

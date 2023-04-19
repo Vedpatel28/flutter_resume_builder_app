@@ -51,7 +51,9 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: s.height*0.02,),
+                  SizedBox(
+                    height: s.height * 0.02,
+                  ),
                   const Text(
                     "Enter Your Skills",
                     style: TextStyle(
@@ -60,9 +62,11 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: s.height*0.03,),
-                  const TextField(
-                    decoration: InputDecoration(
+                  SizedBox(
+                    height: s.height * 0.03,
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "C Programming, Web Technical",
                       hintStyle: TextStyle(
@@ -71,9 +75,11 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       ),
                     ),
                   ),
-                  SizedBox(height: s.height*0.02,),
-                  const TextField(
-                    decoration: InputDecoration(
+                  SizedBox(
+                    height: s.height * 0.02,
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "C Programming, Web Technical",
                       hintStyle: TextStyle(
@@ -82,7 +88,9 @@ class _technical_skills_pageState extends State<technical_skills_page> {
                       ),
                     ),
                   ),
-                  SizedBox(height: s.height*0.04,),
+                  SizedBox(
+                    height: s.height * 0.04,
+                  ),
                   Container(
                     height: s.height * 0.056,
                     width: s.width,

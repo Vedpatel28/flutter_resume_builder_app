@@ -55,7 +55,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("DOB", style: titeltext),
-                  TextField(
+                  TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -142,7 +142,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                   ),
                   Text("Nationality", style: titeltext),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),

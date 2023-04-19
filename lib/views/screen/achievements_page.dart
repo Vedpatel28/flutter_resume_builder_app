@@ -48,7 +48,9 @@ class _achievements_pageState extends State<achievements_page> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: s.height*0.02,),
+                  SizedBox(
+                    height: s.height * 0.02,
+                  ),
                   const Text(
                     "Enter Achievements",
                     style: TextStyle(
@@ -57,9 +59,11 @@ class _achievements_pageState extends State<achievements_page> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: s.height*0.03,),
-                  const TextField(
-                    decoration: InputDecoration(
+                  SizedBox(
+                    height: s.height * 0.03,
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "Exceeded sales 17% average",
                       hintStyle: TextStyle(
@@ -68,9 +72,11 @@ class _achievements_pageState extends State<achievements_page> {
                       ),
                     ),
                   ),
-                  SizedBox(height: s.height*0.02,),
-                  const TextField(
-                    decoration: InputDecoration(
+                  SizedBox(
+                    height: s.height * 0.02,
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 20),
                       hintText: "Exceeded sales 17% average",
                       hintStyle: TextStyle(
@@ -79,7 +85,9 @@ class _achievements_pageState extends State<achievements_page> {
                       ),
                     ),
                   ),
-                  SizedBox(height: s.height*0.04,),
+                  SizedBox(
+                    height: s.height * 0.04,
+                  ),
                   Container(
                     height: s.height * 0.06,
                     width: s.width,

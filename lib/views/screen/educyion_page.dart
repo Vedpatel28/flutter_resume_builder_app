@@ -55,7 +55,7 @@ class _educyion_pageState extends State<educyion_page> {
                     style: titeltext,
                   ),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -70,7 +70,7 @@ class _educyion_pageState extends State<educyion_page> {
                   SizedBox(height: s.height * 0.01),
                   Text("School/College/Institute", style: titeltext),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: "Bhagavan Mahavir University",
@@ -83,7 +83,7 @@ class _educyion_pageState extends State<educyion_page> {
                   SizedBox(height: s.height * 0.01),
                   Text("School/College/Institute", style: titeltext),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: "70% (or) 7.0 CGPA",
@@ -99,7 +99,7 @@ class _educyion_pageState extends State<educyion_page> {
                     style: titeltext,
                   ),
                   SizedBox(height: s.height * 0.01),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "2019",

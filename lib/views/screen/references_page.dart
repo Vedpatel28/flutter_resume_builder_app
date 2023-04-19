@@ -50,7 +50,7 @@ class _references_pageState extends State<references_page> {
                 children: [
                   Text("References Name", style: titeltext),
                   SizedBox(height: s.height*0.02,),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -65,7 +65,7 @@ class _references_pageState extends State<references_page> {
                   SizedBox(height: s.height*0.02,),
                   Text("Designation", style: titeltext),
                   SizedBox(height: s.height*0.02,),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -80,7 +80,7 @@ class _references_pageState extends State<references_page> {
                   SizedBox(height: s.height*0.02,),
                   Text("Organization/institute", style: titeltext),
                   SizedBox(height: s.height*0.02,),
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
