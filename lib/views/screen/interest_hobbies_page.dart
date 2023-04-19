@@ -15,12 +15,8 @@ class _interest_hobbies_pageState extends State<interest_hobbies_page> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(onTap: () {
-          setState(() {
-            Navigator.of(context).pop();
-          });
-        },child: backicon,),
-        toolbarHeight: s.height*0.15,
+        leading: const backbutton(),
+        toolbarHeight: s.height * 0.15,
         title: Text(
           "Interest Hobbies",
           style: AppBarTitile,

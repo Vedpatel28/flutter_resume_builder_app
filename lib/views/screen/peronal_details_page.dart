@@ -24,13 +24,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-            onTap: () {
-              setState(() {
-                Navigator.of(context).pop();
-              });
-            },
-            child: backicon),
+        leading: const backbutton(),
         toolbarHeight: s.height * 0.15,
         title: Text(
           "Peronal Details",

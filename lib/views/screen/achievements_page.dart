@@ -15,13 +15,8 @@ class _achievements_pageState extends State<achievements_page> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.of(context).pop();
-          },
-          child: backicon,
-        ),
-        toolbarHeight: s.height*0.15,
+        leading: const backbutton(),
+        toolbarHeight: s.height * 0.15,
         title: Text(
           "Achievements",
           style: AppBarTitile,

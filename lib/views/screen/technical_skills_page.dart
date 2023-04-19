@@ -16,16 +16,7 @@ class _technical_skills_pageState extends State<technical_skills_page> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: s.height * 0.15,
-        leading: GestureDetector(
-          onTap: () {
-            setState(
-              () {
-                Navigator.of(context).pop();
-              },
-            );
-          },
-          child: backicon,
-        ),
+        leading: const backbutton(),
         title: Text(
           "Technical Skills",
           style: AppBarTitile,

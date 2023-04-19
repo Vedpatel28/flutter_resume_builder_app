@@ -15,13 +15,7 @@ class _carrier_objective_pageState extends State<carrier_objective_page> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-            onTap: () {
-              setState(() {
-                Navigator.of(context).pop();
-              });
-            },
-            child: backicon),
+        leading: const backbutton(),
         title: Text("Carrier Objective", style: AppBarTitile),
         toolbarHeight: s.height * 0.15,
         centerTitle: true,

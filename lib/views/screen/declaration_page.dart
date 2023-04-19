@@ -17,13 +17,7 @@ class _declaration_pageState extends State<declaration_page> {
     bool onoffval = false;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-            onTap: () {
-              setState(() {
-                Navigator.of(context).pop();
-              });
-            },
-            child: backicon),
+        leading: const backbutton(),
         toolbarHeight: s.height * 0.15,
         title: Text(
           "Declaration",

@@ -19,14 +19,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
     Size s = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () {
-            setState(() {
-              Navigator.of(context).pushNamed(allroutes.buildpage);
-            });
-          },
-          child: backicon,
-        ),
+        leading: const backbutton(),
         toolbarHeight: s.height * 0.15,
         title: Text(
           "Declaration",
