@@ -27,47 +27,6 @@ class _contact_info_pageState extends State<contact_info_page> {
             "Contact Info",
             style: AppBarTitile,
           ),
-          bottom: TabBar(
-            indicatorColor: Colors.indigo,
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicatorWeight: 3,
-            indicatorPadding: EdgeInsets.all(4),
-            tabs: [
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    Navigator.of(context).pushNamed(allroutes.buildoption[2] as String,);
-                  });
-                },
-                child: Tab(
-                  child: Text(
-                    "Contact",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    Navigator.of(context).pushNamed(allroutes.buildoption[3] as String);
-                  });
-                },
-                child: Tab(
-                  height: 30,
-                  child: Text(
-                    "Photo",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
           centerTitle: true,
           backgroundColor: Colors.blue,
         ),
