@@ -129,6 +129,7 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                       ),
                     ),
                     SizedBox(height: s.height * 0.02),
+                    // Education
                     Container(
                       width: s.width * 0.4,
                       height: s.height * 0.05,
