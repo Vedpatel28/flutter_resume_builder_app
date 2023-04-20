@@ -98,7 +98,7 @@ class _contact_info_pageState extends State<contact_info_page> {
             Expanded(
               flex: 11,
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: SingleChildScrollView(
                   child: IndexedStack(
                     index: ix,
