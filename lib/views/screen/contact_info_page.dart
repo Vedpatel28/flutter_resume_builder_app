@@ -105,9 +105,10 @@ class _contact_info_pageState extends State<contact_info_page> {
                     children: [
                       // contact index 0
                       Container(
-                        height: s.height * 0.55,
-                        decoration: const BoxDecoration(
+                        height: s.height * 0.56,
+                        decoration: BoxDecoration(
                           color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(18),
@@ -116,287 +117,371 @@ class _contact_info_pageState extends State<contact_info_page> {
                               // Name
                               Row(
                                 children: [
-                                  Container(
-                                    height: s.height * 0.08,
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Icon(
-                                            Icons.account_circle,
-                                            color: Colors.grey,
-                                            size: s.height * 0.05,
-                                          ),
-                                        ],
-                                      ),
+                                  Expanded(
+                                    child: Icon(
+                                      Icons.account_circle,
+                                      color: Colors.grey,
+                                      size: s.height * 0.05,
                                     ),
                                   ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText: "Name",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "Name",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
+                              SizedBox(height: s.height * 0.01),
                               // Email
                               Row(
                                 children: [
-                                  Container(
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Icon(
-                                            Icons.email_sharp,
-                                            color: Colors.grey,
-                                            size: s.height * 0.05,
-                                          ),
-                                        ],
-                                      ),
+                                  Expanded(
+                                    child: Icon(
+                                      Icons.email_sharp,
+                                      color: Colors.grey,
+                                      size: s.height * 0.05,
                                     ),
                                   ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText: "Email",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "E-mail",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                              // phone
+                              SizedBox(height: s.height * 0.01),
+                              // Phone
                               Row(
                                 children: [
-                                  Container(
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Icon(
-                                            Icons.phone_iphone,
-                                            color: Colors.grey,
-                                            size: s.height * 0.05,
-                                          ),
-                                        ],
-                                      ),
+                                  Expanded(
+                                    child: Icon(
+                                      Icons.phone_android_rounded,
+                                      color: Colors.grey,
+                                      size: s.height * 0.05,
                                     ),
                                   ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText: "Phone",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "Phone",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
+                              SizedBox(height: s.height * 0.01),
                               // Address
                               Row(
                                 children: [
-                                  Container(
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Icon(
-                                            Icons.location_pin,
-                                            color: Colors.grey,
-                                            size: s.height * 0.05,
-                                          ),
-                                        ],
-                                      ),
+                                  Expanded(
+                                    child: Icon(
+                                      Icons.location_on_outlined,
+                                      color: Colors.grey,
+                                      size: s.height * 0.05,
                                     ),
                                   ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText:
-                                                  "Address (Street,Building No)",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "Address",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                              // Address 2
+                              SizedBox(height: s.height * 0.01),
+                              // Address
                               Row(
                                 children: [
-                                  Container(
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          // Icon(
-                                          //   Icons.location_pin,
-                                          //   color: Colors.grey,
-                                          //   size: s.height * 0.05,
-                                          // ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText: "Address 2",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  // Expanded(),
+                                  Spacer(),
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "Address 2",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                              // Address 3
+                              SizedBox(height: s.height * 0.01),
+                              // Address
                               Row(
                                 children: [
-                                  Container(
-                                    width: s.width * 0.14,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: const [
-                                          // Icon(
-                                          //   Icons.location_pin,
-                                          //   color: Colors.grey,
-                                          //   size: s.height * 0.05,
-                                          // ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: s.width * 0.6,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        // crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextFormField(
-                                            decoration: const InputDecoration(
-                                              hintText: "Address 3",
-                                              border: UnderlineInputBorder(),
-                                              hintStyle:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                          ),
-                                        ],
+                                  // Expanded(
+                                  //   child: Icon(
+                                  //     Icons.account_circle,
+                                  //     color: Colors.grey,
+                                  //     size: s.height * 0.05,
+                                  //   ),
+                                  // ),
+                                  Spacer(),
+                                  SizedBox(width: s.width * 0.1),
+                                  Expanded(
+                                    flex: 11,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                        hintText: "Address 3",
+                                        border: UnderlineInputBorder(),
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
+                              // Row(
+                              //   children: [
+                              //     Container(
+                              //       width: s.width * 0.14,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           crossAxisAlignment:
+                              //               CrossAxisAlignment.start,
+                              //           children: [
+                              //             Icon(
+                              //               Icons.email_sharp,
+                              //               color: Colors.grey,
+                              //               size: s.height * 0.05,
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //     Container(
+                              //       width: s.width * 0.6,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           // crossAxisAlignment: CrossAxisAlignment.start,
+                              //           children: [
+                              //             TextFormField(
+                              //               decoration: const InputDecoration(
+                              //                 hintText: "Email",
+                              //                 border: UnderlineInputBorder(),
+                              //                 hintStyle:
+                              //                     TextStyle(color: Colors.grey),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
+                              // // phone
+                              // Row(
+                              //   children: [
+                              //     Container(
+                              //       width: s.width * 0.14,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           crossAxisAlignment:
+                              //               CrossAxisAlignment.start,
+                              //           children: [
+                              //             Icon(
+                              //               Icons.phone_iphone,
+                              //               color: Colors.grey,
+                              //               size: s.height * 0.05,
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //     Container(
+                              //       width: s.width * 0.6,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           // crossAxisAlignment: CrossAxisAlignment.start,
+                              //           children: [
+                              //             TextFormField(
+                              //               decoration: const InputDecoration(
+                              //                 hintText: "Phone",
+                              //                 border: UnderlineInputBorder(),
+                              //                 hintStyle:
+                              //                     TextStyle(color: Colors.grey),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
+                              // // Address
+                              // Row(
+                              //   children: [
+                              //     Container(
+                              //       width: s.width * 0.14,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           crossAxisAlignment:
+                              //               CrossAxisAlignment.start,
+                              //           children: [
+                              //             Icon(
+                              //               Icons.location_pin,
+                              //               color: Colors.grey,
+                              //               size: s.height * 0.05,
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //     Container(
+                              //       width: s.width * 0.6,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           // crossAxisAlignment: CrossAxisAlignment.start,
+                              //           children: [
+                              //             TextFormField(
+                              //               decoration: const InputDecoration(
+                              //                 hintText:
+                              //                     "Address (Street,Building No)",
+                              //                 border: UnderlineInputBorder(),
+                              //                 hintStyle:
+                              //                     TextStyle(color: Colors.grey),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
+                              // // Address 2
+                              // Row(
+                              //   children: [
+                              //     Container(
+                              //       width: s.width * 0.14,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           crossAxisAlignment:
+                              //               CrossAxisAlignment.start,
+                              //           children: const [],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //     Container(
+                              //       width: s.width * 0.6,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           // crossAxisAlignment: CrossAxisAlignment.start,
+                              //           children: [
+                              //             TextFormField(
+                              //               decoration: const InputDecoration(
+                              //                 hintText: "Address 2",
+                              //                 border: UnderlineInputBorder(),
+                              //                 hintStyle:
+                              //                     TextStyle(color: Colors.grey),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
+                              // // Address 3
+                              // Row(
+                              //   children: [
+                              //     Container(
+                              //       width: s.width * 0.14,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           crossAxisAlignment:
+                              //               CrossAxisAlignment.start,
+                              //           children: const [],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //     Container(
+                              //       width: s.width * 0.6,
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.white,
+                              //       ),
+                              //       child: Padding(
+                              //         padding: const EdgeInsets.all(10),
+                              //         child: Column(
+                              //           // crossAxisAlignment: CrossAxisAlignment.start,
+                              //           children: [
+                              //             TextFormField(
+                              //               decoration: const InputDecoration(
+                              //                 hintText: "Address 3",
+                              //                 border: UnderlineInputBorder(),
+                              //                 hintStyle:
+                              //                     TextStyle(color: Colors.grey),
+                              //               ),
+                              //             ),
+                              //           ],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
                             ],
                           ),
                         ),

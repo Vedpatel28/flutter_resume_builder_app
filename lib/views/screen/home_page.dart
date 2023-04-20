@@ -33,6 +33,7 @@ class _home_pageState extends State<home_page> {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        elevation: 0,
       ),
       body: Center(
         child: Column(
