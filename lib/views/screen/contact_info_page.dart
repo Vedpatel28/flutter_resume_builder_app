@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
+import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 
 class contact_info_page extends StatefulWidget {
   const contact_info_page({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class contact_info_page extends StatefulWidget {
 
 class _contact_info_pageState extends State<contact_info_page> {
   int ix = 0;
+
+  GlobalKey<FormState> formmet = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +110,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                     children: [
                       // contact index 0
                       Container(
-                        height: s.height * 0.56,
+                        height: s.height * 0.64,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -114,31 +118,48 @@ class _contact_info_pageState extends State<contact_info_page> {
                         child: Padding(
                           padding: const EdgeInsets.all(18),
                           child: Column(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               // Name
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Icon(
-                                      Icons.account_circle,
-                                      color: Colors.grey,
-                                      size: s.height * 0.05,
-                                    ),
-                                  ),
-                                  SizedBox(width: s.width * 0.1),
-                                  Expanded(
-                                    flex: 11,
-                                    child: TextFormField(
-                                      decoration: const InputDecoration(
-                                        hintText: "Enter Name",
-                                        labelText: "Name",
-                                        border: UnderlineInputBorder(),
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey),
+                              Form(
+                                key: formmet,
+                                autovalidateMode:
+                                    AutovalidateMode.onUserInteraction,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Icon(
+                                        Icons.account_circle,
+                                        color: Colors.grey,
+                                        size: s.height * 0.05,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    SizedBox(width: s.width * 0.1),
+                                    Expanded(
+                                      flex: 11,
+                                      child: TextFormField(
+                                        initialValue: allGlobalvar.name,
+                                        validator: (value) {
+                                          if (value!.isEmpty) {
+                                            return "Enter Name !!";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        onSaved: (value) {
+                                          allGlobalvar.name = value;
+                                        },
+                                        decoration: const InputDecoration(
+                                          hintText: "Enter Name",
+                                          labelText: "Name",
+                                          border: UnderlineInputBorder(),
+                                          hintStyle:
+                                              TextStyle(color: Colors.grey),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                               SizedBox(height: s.height * 0.01),
                               // Email
@@ -155,6 +176,17 @@ class _contact_info_pageState extends State<contact_info_page> {
                                   Expanded(
                                     flex: 11,
                                     child: TextFormField(
+                                      initialValue: allGlobalvar.email,
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "Enter Name !!";
+                                        } else {
+                                          return null;
+                                        }
+                                      },
+                                      onSaved: (value) {
+                                        allGlobalvar.email = value;
+                                      },
                                       decoration: const InputDecoration(
                                         hintText: "Enter E-mail",
                                         labelText: "E-mail",
@@ -181,6 +213,28 @@ class _contact_info_pageState extends State<contact_info_page> {
                                   Expanded(
                                     flex: 11,
                                     child: TextFormField(
+                                      maxLength: 10,
+                                      textInputAction: TextInputAction.next,
+                                      keyboardType: TextInputType.phone,
+                                      inputFormatters: [
+                                        FilteringTextInputFormatter.digitsOnly,
+                                      ],
+                                      initialValue:
+                                          (allGlobalvar.contact == null)
+                                              ? null
+                                              : allGlobalvar.contact.toString(),
+                                      validator: (val) {
+                                        if (val!.isEmpty) {
+                                          return "Please enter contact...";
+                                        } else if (val!.length < 10) {
+                                          return "Enter the 10 digits...";
+                                        } else {
+                                          return null;
+                                        }
+                                      },
+                                      onSaved: (val) {
+                                        allGlobalvar.contact = int.parse(val!);
+                                      },
                                       decoration: const InputDecoration(
                                         hintText: "Enter Phone Number",
                                         labelText: "Number",
@@ -208,6 +262,18 @@ class _contact_info_pageState extends State<contact_info_page> {
                                   Expanded(
                                     flex: 11,
                                     child: TextFormField(
+                                      textInputAction: TextInputAction.next,
+                                      initialValue: allGlobalvar.ad1,
+                                      validator: (value) {
+                                        if (value!.isEmpty) {
+                                          return "enter Proper Address";
+                                        } else {
+                                          return null;
+                                        }
+                                      },
+                                      onSaved: (newValue) {
+                                        allGlobalvar.ad1;
+                                      },
                                       decoration: const InputDecoration(
                                         hintText: "Enter Address",
                                         labelText: "Address",
