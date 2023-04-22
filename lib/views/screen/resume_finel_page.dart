@@ -9,8 +9,8 @@ class resume_finel_page extends StatefulWidget {
 }
 
 class _resume_finel_pageState extends State<resume_finel_page> {
+  int a = 2;
 
-  int a=2;
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;

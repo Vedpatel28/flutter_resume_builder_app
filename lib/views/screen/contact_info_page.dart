@@ -292,15 +292,24 @@ class _contact_info_pageState extends State<contact_info_page> {
                                                 allGlobalvar.ad1 = val;
                                               },
                                               onFieldSubmitted: (val) {
-                                                if (formmet.currentState!.validate()) {formmet.currentState!.save();
-                                                  ScaffoldMessenger.of(context).showSnackBar(allsnackBar(
+                                                if (formmet.currentState!
+                                                    .validate()) {
+                                                  formmet.currentState!.save();
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    allsnackBar(
                                                       text:
                                                           "Successfully validated !!",
                                                       color: Colors.green,
                                                     ),
                                                   );
                                                 } else {
-                                                  ScaffoldMessenger.of(context).showSnackBar(allsnackBar(text: "Failled to validate !!", color: Colors.red,
+                                                  ScaffoldMessenger.of(context)
+                                                      .showSnackBar(
+                                                    allsnackBar(
+                                                      text:
+                                                          "Failled to validate !!",
+                                                      color: Colors.red,
                                                     ),
                                                   );
                                                 }
@@ -417,15 +426,18 @@ class _contact_info_pageState extends State<contact_info_page> {
                                   alignment: Alignment.center,
                                   shadowColor: Colors.black,
                                   shape: UnderlineInputBorder(
-                                    borderRadius: BorderRadius.circular(20)),
-                                  title: Text("Select For Add Image",style: titeltext),
-                                  icon: const Icon(Icons.add_photo_alternate_outlined),
+                                      borderRadius: BorderRadius.circular(20)),
+                                  title: Text("Select For Add Image",
+                                      style: titeltext),
+                                  icon: const Icon(
+                                      Icons.add_photo_alternate_outlined),
                                   elevation: 4,
                                   buttonPadding: const EdgeInsets.all(12),
                                   content: Container(
-                                    height: s.height*0.1,
+                                    height: s.height * 0.1,
                                     alignment: Alignment.center,
-                                    child: const Text("Click Camera 📷 Button For Add Live Photo.\n"
+                                    child: const Text(
+                                        "Click Camera 📷 Button For Add Live Photo.\n"
                                         "Click Gallery 🌌 Button For Add all ready Clicked Photo.\n"),
                                   ),
                                   actions: [
