@@ -1,9 +1,11 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
 import 'package:flutter_resume_builder_app/views/component/resume_snackbar.dart';
 import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
+import 'package:image_picker/image_picker.dart';
 
 class contact_info_page extends StatefulWidget {
   const contact_info_page({Key? key}) : super(key: key);
@@ -16,6 +18,8 @@ class _contact_info_pageState extends State<contact_info_page> {
   int ix = 0;
 
   GlobalKey<FormState> formmet = GlobalKey<FormState>();
+
+  ImagePicker imagepic = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +108,7 @@ class _contact_info_pageState extends State<contact_info_page> {
             Expanded(
               flex: 11,
               child: Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: IndexedStack(
                   index: ix,
                   children: [
@@ -326,7 +330,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                       Row(
                                         children: [
                                           // Expanded(),
-                                          Spacer(),
+                                          const Spacer(),
                                           SizedBox(width: s.width * 0.1),
                                           Expanded(
                                             flex: 11,
@@ -353,7 +357,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                           //     size: s.height * 0.05,
                                           //   ),
                                           // ),
-                                          Spacer(),
+                                          const Spacer(),
                                           SizedBox(width: s.width * 0.1),
                                           Expanded(
                                             flex: 11,
@@ -402,26 +406,74 @@ class _contact_info_pageState extends State<contact_info_page> {
                       ),
                       alignment: Alignment.center,
                       child: Stack(
+                        alignment: Alignment.bottomRight,
                         children: [
                           CircleAvatar(
-                            radius: s.height * 0.07,
+                            radius: s.height * 0.08,
                             foregroundColor: Colors.grey,
-                            child: Align(
-                              alignment: Alignment(0.9, 0.9),
-                              child: Container(
-                                height: s.height * 0.04,
-                                width: s.width * 0.06,
-                                decoration: const BoxDecoration(
-                                  color: Colors.blue,
-                                  shape: BoxShape.circle,
+                            backgroundColor: Colors.grey,
+                            foregroundImage: (allGlobalvar.image != null)
+                                ? FileImage(allGlobalvar.image!)
+                                : null,
+                            child: Text("ADD", style: titeltext),
+                          ),
+                          FloatingActionButton.small(
+                            elevation: 5,
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  alignment: Alignment.center,
+                                  shadowColor: Colors.black,
+                                  shape: UnderlineInputBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                  title: Text("Select For Add Image",style: titeltext),
+                                  icon: const Icon(Icons.add_photo_alternate_outlined),
+                                  elevation: 4,
+                                  buttonPadding: const EdgeInsets.all(12),
+                                  content: Container(
+                                    height: s.height*0.1,
+                                    alignment: Alignment.center,
+                                    child: const Text("Click Camera 📷 Button For Add Live Photo.\n"
+                                        "Click Gallery 🌌 Button For Add all ready Clicked Photo.\n"),
+                                  ),
+                                  actions: [
+                                    ElevatedButton.icon(
+                                      onPressed: () async {
+                                        Navigator.of(context).pop();
+                                        XFile? img = await imagepic.pickImage(
+                                            source: ImageSource.camera);
+                                        if (img != null) {
+                                          setState(() {
+                                            allGlobalvar.image = File(img.path);
+                                          });
+                                        }
+                                      },
+                                      label: const Text("Camera"),
+                                      icon:
+                                          const Icon(Icons.camera_alt_outlined),
+                                    ),
+                                    ElevatedButton.icon(
+                                      onPressed: () async {
+                                        Navigator.of(context).pop();
+                                        XFile? img = await imagepic.pickImage(
+                                            source: ImageSource.gallery);
+                                        if (img != null) {
+                                          setState(() {
+                                            allGlobalvar.image = File(img.path);
+                                          });
+                                        }
+                                      },
+                                      label: const Text("Gallery"),
+                                      icon: const Icon(Icons.photo_library),
+                                    ),
+                                  ],
                                 ),
-                                alignment: AlignmentDirectional.center,
-                                child: const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
+                              );
+                            },
+                            backgroundColor: Colors.blue,
+                            child: const Icon(
+                                Icons.enhance_photo_translate_outlined),
                           ),
                         ],
                       ),

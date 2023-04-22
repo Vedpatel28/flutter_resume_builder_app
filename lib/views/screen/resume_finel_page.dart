@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 
 class resume_finel_page extends StatefulWidget {
   const resume_finel_page({Key? key}) : super(key: key);
@@ -22,6 +23,11 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                 width: s.width * 0.4,
                 height: s.height * 0.97,
                 color: Colors.black,
+                child: CircleAvatar(
+                  foregroundImage: (allGlobalvar.image != null)
+                      ? FileImage(allGlobalvar.image!)
+                      : null,
+                ),
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.vertical,
