@@ -350,13 +350,6 @@ class _contact_info_pageState extends State<contact_info_page> {
                                       // Address
                                       Row(
                                         children: [
-                                          // Expanded(
-                                          //   child: Icon(
-                                          //     Icons.account_circle,
-                                          //     color: Colors.grey,
-                                          //     size: s.height * 0.05,
-                                          //   ),
-                                          // ),
                                           const Spacer(),
                                           SizedBox(width: s.width * 0.1),
                                           Expanded(
