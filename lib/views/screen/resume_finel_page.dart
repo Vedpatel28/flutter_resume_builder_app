@@ -9,6 +9,8 @@ class resume_finel_page extends StatefulWidget {
 }
 
 class _resume_finel_pageState extends State<resume_finel_page> {
+
+  int a=2;
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
@@ -18,15 +20,136 @@ class _resume_finel_pageState extends State<resume_finel_page> {
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                width: s.width * 0.4,
+                width: s.width * 0.7,
                 height: s.height * 0.97,
                 color: Colors.black,
-                child: CircleAvatar(
-                  foregroundImage: (allGlobalvar.image != null)
-                      ? FileImage(allGlobalvar.image!)
-                      : null,
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: s.width,
+                        color: Colors.transparent,
+                        child: CircleAvatar(
+                          radius: s.height * 0.1,
+                          foregroundImage: (allGlobalvar.image != null)
+                              ? FileImage(allGlobalvar.image!)
+                              : null,
+                        ),
+                      ),
+                      SizedBox(height: s.height * 0.01),
+                      // personal info
+                      Container(
+                        height: s.height * 0.05,
+                        width: s.width,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.vertical(
+                            bottom: Radius.circular(20),
+                            top: Radius.elliptical(15, 50),
+                          ),
+                          color: Colors.amber,
+                        ),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "Personal Info",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      // name
+                      Text(
+                        "\n Name     : ${allGlobalvar.name}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // e-mail
+                      Text(
+                        " E-Mail    : ${allGlobalvar.email}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // contact
+                      Text(
+                        " Contact  : ${allGlobalvar.contact}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // address
+                      Text(
+                        " Address : ${allGlobalvar.ad1}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: s.height * 0.02),
+                      // personal Details
+                      Container(
+                        height: s.height * 0.05,
+                        width: s.width,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.vertical(
+                            bottom: Radius.circular(20),
+                            top: Radius.elliptical(15, 50),
+                          ),
+                          color: Colors.amber,
+                        ),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "Personal Details",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      // DOB
+                      Text(
+                        "\n DOB              : ${allGlobalvar.dob}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // Merital
+                      Text(
+                        " Marital         : ${allGlobalvar.Merital}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // Languages
+                      Text(
+                        " Languages  : ${allGlobalvar.Languages}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // Nationality
+                      Text(
+                        " Nationality  : ${allGlobalvar.nationality}",
+                        style: const TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SingleChildScrollView(

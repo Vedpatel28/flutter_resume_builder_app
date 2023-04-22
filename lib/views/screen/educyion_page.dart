@@ -20,7 +20,7 @@ class _educyion_pageState extends State<educyion_page> {
         leading: const backbutton(),
         toolbarHeight: s.height * 0.15,
         title: Text(
-          "Educyion",
+          "Education",
           style: AppBarTitile,
         ),
         centerTitle: true,
