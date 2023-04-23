@@ -24,49 +24,49 @@ class allGlobalvar {
 
   // Education
 
-  static String? coursordegree;
-  static String? sci1;
-  static String? sci2;
-  static int? passtime;
+  static String? Edcoursordegree;
+  static String? Edsci1;
+  static String? Edsci2;
+  static int? Edpasstime;
 
   // Experiences
 
-  static String? company;
-  static String? sccoin;
-  static String? experiencesroles;
-  static String? employ;
-  static int? datejoin;
-  static int? dateexit;
+  static String? Excompany;
+  static String? Exsccoin;
+  static String? Exexperiencesroles;
+  static String? Exemploy;
+  static int? Exdatejoin;
+  static int? Exdateexit;
 
   // Technical
 
-  static List<String>? skill;
+  static List<String>? Teskill;
 
   // Interest Hobbies
 
   // project
 
-  static String? projecttitle;
-  static String? technologies;
-  static String? projectroles;
-  static String? tecprogrammer;
-  static String? proDescripation;
+  static String? Prprojecttitle;
+  static String? Prtechnologies;
+  static String? Prprojectroles;
+  static String? Prtecprogrammer;
+  static String? PrproDescripation;
 
   // Achievement
 
-  static List<String>? Achievement;
+  static List<String>? AcAchievement;
 
   // References
 
-  static String? Referencesname;
-  static String? Desigenation;
-  static String? Organization;
+  static String? ReReferencesname;
+  static String? ReDesigenation;
+  static String? ReOrganization;
 
   // Declaration
 
-  static String? declarationDescripation;
-  static int? dateofdeclartion;
-  static int? placedeclaration;
+  static String? DedeclarationDescripation;
+  static int? Dedateofdeclartion;
+  static int? Deplacedeclaration;
 
   // profile photo
 
