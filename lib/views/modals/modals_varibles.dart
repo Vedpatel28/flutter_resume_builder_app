@@ -12,14 +12,14 @@ class allGlobalvar {
 
   // Carrier objective
 
-  static String? Descripation;
-  static String? candidate;
+  static String? CareerobjectveDescripation;
+  static String? carrierexperirncedcandidate;
 
   // personal details page
 
-  static int? dob;
+  static String? dob;
   static String? Merital;
-  static List<String>? Languages;
+  static String? Languages;
   static String? nationality;
 
   // Education

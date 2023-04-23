@@ -156,6 +156,7 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
                       width: s.width * 0.8,
@@ -211,12 +212,21 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                       ),
                     ),
                     SizedBox(height: s.height * 0.01),
-                    Text(
-                      "    aeu f  uuao jsh ayuisgifhnd fhyfjhsfkjsf auiojoidhoih \n    fojooioijoa hioiuoijdaojudhusiofjoj oaifjokj ioihoja \n    podjoiaidio jhif ui io uoiajsfi iofuiaio  auio jio h duifdj\n     fuioh iodf oi fiosjf io fuif iuo o dsio hfiosjdf hs fuio",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontSize: s.height * 0.013,
-                      ),
+                    Row(
+                      children: [
+                        SizedBox(width: s.width*0.02),
+                        Container(
+                          width: s.width*0.8,
+                          // color: Colors.black,
+                          child: Text(
+                            "${allGlobalvar.CareerobjectveDescripation} \n\n ${allGlobalvar.carrierexperirncedcandidate}",
+                            style: TextStyle(
+                              color: Colors.grey.shade700,
+                              fontSize: s.height * 0.013,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: s.height * 0.02),
                     // Experience

@@ -191,7 +191,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                               initialValue: allGlobalvar.email,
                                               validator: (value) {
                                                 if (value!.isEmpty) {
-                                                  return "Enter Name !!";
+                                                  return "Enter E-Mail !!";
                                                 } else {
                                                   return null;
                                                 }
@@ -241,7 +241,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                               validator: (val) {
                                                 if (val!.isEmpty) {
                                                   return "Please enter contact...";
-                                                } else if (val!.length < 10) {
+                                                } else if (val.length < 10) {
                                                   return "Contact number must have 10 digits...";
                                                 } else {
                                                   return null;
@@ -308,7 +308,7 @@ class _contact_info_pageState extends State<contact_info_page> {
                                                       .showSnackBar(
                                                     allsnackBar(
                                                       text:
-                                                          "Failled to validate !!",
+                                                          "Failed to validate !!",
                                                       color: Colors.red,
                                                     ),
                                                   );

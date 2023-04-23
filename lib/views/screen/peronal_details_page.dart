@@ -69,7 +69,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         }
                       },
                       onSaved: (val) {
-                        allGlobalvar.dob = int.parse(val!);
+                        allGlobalvar.dob = val! ;
                       },
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -136,7 +136,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         setState(
                           () {
                             (val = true)
-                                ? allGlobalvar.Languages?.add("English")
+                                ? allGlobalvar.Languages = "English"
                                 : null;
                             chackboxone = val!;
                           },
@@ -151,7 +151,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         setState(
                           () {
                             (vale = true)
-                                ? allGlobalvar.Languages?.add("Hindi")
+                                ? allGlobalvar.Languages = "Hindi"
                                 : null;
                             chackboxtwo = vale!;
                           },
@@ -166,7 +166,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         setState(
                           () {
                             (value = true)
-                                ? allGlobalvar.Languages?.add("Gujarati")
+                                ? allGlobalvar.Languages = "Gujarati"
                                 : null;
                             chackboxthree = value!;
                           },
@@ -188,7 +188,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         }
                       },
                       onSaved: (val) {
-                        allGlobalvar.dob = int.parse(val!);
+                        allGlobalvar.nationality = val!;
                       },
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
