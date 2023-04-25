@@ -175,17 +175,14 @@ class _educyion_pageState extends State<educyion_page> {
                         ),
                       ),
                     ),
-                    SizedBox(width: s.width*0.2,height: s.height*0.01),
+                    SizedBox(width: s.width * 0.2, height: s.height * 0.01),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           formmath.currentState!.reset();
-                          allGlobalvar.name = allGlobalvar
-                              .email = allGlobalvar
-                              .contact =
-                              allGlobalvar.ad1 =
-                              allGlobalvar.ad2 =
-                              allGlobalvar.ad3 = null;
+                          allGlobalvar.name = allGlobalvar.email =
+                              allGlobalvar.contact = allGlobalvar.ad1 =
+                                  allGlobalvar.ad2 = allGlobalvar.ad3 = null;
                         });
                       },
                       child: const Text("Reset"),

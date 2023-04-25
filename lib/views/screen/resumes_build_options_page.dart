@@ -26,6 +26,24 @@ class _resumes_build_options_pageState
         centerTitle: true,
         backgroundColor: Colors.blue,
         elevation: 0,
+        actions: [
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                Navigator.of(context).pushNamed(allroutes.finel);
+              });
+            },
+            child: Icon(
+              Icons.picture_as_pdf_rounded,
+              color: Colors.white,
+              size: s.height*0.035,
+            ),
+          ),
+          Icon(
+            Icons.add,
+            color: Colors.transparent,
+          ),
+        ],
       ),
       body: Column(
         children: [

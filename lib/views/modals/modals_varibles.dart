@@ -45,6 +45,9 @@ class allGlobalvar {
 
   // Interest Hobbies
 
+  static String? Ihobbies;
+  static List<String> hobbies = [];
+
   // project
 
   static String? Prprojecttitle;
@@ -55,7 +58,8 @@ class allGlobalvar {
 
   // Achievement
 
-  static List<String>? AcAchievement;
+  static String? AcAchievement;
+  static List<String>? Achievemebnt;
 
   // References
 
@@ -67,7 +71,7 @@ class allGlobalvar {
 
   static String? DedeclarationDescripation;
   static int? Dedateofdeclartion;
-  static int? Deplacedeclaration;
+  static String? Deplacedeclaration;
 
   // profile photo
 
