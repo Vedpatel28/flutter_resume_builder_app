@@ -40,7 +40,8 @@ class allGlobalvar {
 
   // Technical
 
-  static List<String>? Teskill;
+  static String? Teskill;
+  static List<String> technicalskill = [];
 
   // Interest Hobbies
 

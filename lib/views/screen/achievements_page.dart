@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
 import '../../utils/back_button_icon.dart';
+import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 
 class achievements_page extends StatefulWidget {
   const achievements_page({Key? key}) : super(key: key);
@@ -25,10 +26,9 @@ class _achievements_pageState extends State<achievements_page> {
         backgroundColor: Colors.blue,
         elevation: 0,
       ),
-      body : Padding(
+      body: Padding(
         padding: const EdgeInsets.all(20),
         child: Container(
-          height: s.height * 0.4,
           width: s.width,
           decoration: const BoxDecoration(
             color: Colors.white,
@@ -40,14 +40,13 @@ class _achievements_pageState extends State<achievements_page> {
             padding: const EdgeInsets.all(20),
             child: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(
                     height: s.height * 0.02,
                   ),
                   const Text(
-                    "Enter Achievements",
+                    "Enter Your Skills",
                     style: TextStyle(
                       fontSize: 22,
                       color: Colors.grey,
@@ -57,47 +56,72 @@ class _achievements_pageState extends State<achievements_page> {
                   SizedBox(
                     height: s.height * 0.03,
                   ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 20),
-                      hintText: "Exceeded sales 17% average",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 20,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            contentPadding: EdgeInsets.only(left: 20),
+                            hintText: "C Programming, Web Technical",
+                            hintStyle: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: s.height * 0.02,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 20),
-                      hintText: "Exceeded sales 17% average",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 20,
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.delete),
                       ),
-                    ),
+                    ],
                   ),
+                  ...allGlobalvar.technicalskill
+                      .map(
+                        (e) => Row(
+                          children: [
+                            Expanded(
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                  contentPadding: EdgeInsets.only(left: 20),
+                                  hintText: "C Programming, Web Technical",
+                                  hintStyle: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  allGlobalvar.technicalskill
+                                      .remove(allGlobalvar.technicalskill);
+                                  allGlobalvar.technicalskill.remove("");
+                                });
+                              },
+                              icon: Icon(Icons.delete),
+                            ),
+                          ],
+                        ),
+                      )
+                      .toList(),
                   SizedBox(
                     height: s.height * 0.04,
                   ),
-                  Container(
-                    height: s.height * 0.06,
-                    width: s.width,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.grey.shade300,
-                        width: 2,
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              allGlobalvar.technicalskill.add("");
+                            });
+                          },
+                          child: Icon(Icons.add),
+                        ),
                       ),
-                    ),
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.grey.shade300,
-                      size: s.height * 0.05,
-                    ),
+                    ],
                   ),
                 ],
               ),
