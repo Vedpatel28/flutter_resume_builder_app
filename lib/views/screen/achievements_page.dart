@@ -70,7 +70,7 @@ class _achievements_pageState extends State<achievements_page> {
                             initialValue: allGlobalvar.AcAchievement,
                             textInputAction: TextInputAction.next,
                             validator: (value) {
-                              if (value != null) {
+                              if (value!.isEmpty) {
                                 return "Enter Your Achievement";
                               } else {
                                 return null;
@@ -103,7 +103,7 @@ class _achievements_pageState extends State<achievements_page> {
                             initialValue: allGlobalvar.AcAchievement,
                             textInputAction: TextInputAction.next,
                             validator: (value) {
-                              if (value != null) {
+                              if (value!.isEmpty) {
                                 return "Enter Your Achievement";
                               } else {
                                 return null;

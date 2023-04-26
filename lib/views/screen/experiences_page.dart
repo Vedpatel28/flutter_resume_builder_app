@@ -169,6 +169,11 @@ class _experiences_pageState extends State<experiences_page> {
                       onChanged: (curremp) {
                         setState(
                           () {
+                            if (curremp == true) {
+                              allGlobalvar.Exemploy = "Currently Employed";
+                            } else {
+                              allGlobalvar.Exemploy = "Previously Employed";
+                            }
                             employedstatusredbox = curremp;
                           },
                         );
@@ -281,7 +286,7 @@ class _experiences_pageState extends State<experiences_page> {
                         GestureDetector(
                           onTap: () {
                             setState(
-                                  () {},
+                              () {},
                             );
                           },
                           child: TextButton(

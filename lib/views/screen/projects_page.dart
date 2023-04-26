@@ -58,8 +58,9 @@ class _projects_pageState extends State<projects_page> {
                     ),
                     TextFormField(
                       initialValue: allGlobalvar.Prprojecttitle,
+                      textInputAction: TextInputAction.next,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Title";
                         } else {
                           return null;
@@ -135,7 +136,7 @@ class _projects_pageState extends State<projects_page> {
                     TextFormField(
                       initialValue: allGlobalvar.Prprojectroles,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Roles";
                         } else {
                           return null;
@@ -163,7 +164,7 @@ class _projects_pageState extends State<projects_page> {
                     TextFormField(
                       initialValue: allGlobalvar.Prtecprogrammer,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Technologies";
                         } else {
                           return null;
@@ -193,7 +194,7 @@ class _projects_pageState extends State<projects_page> {
                     TextFormField(
                       initialValue: allGlobalvar.PrproDescripation,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Project Descripation";
                         } else {
                           return null;
