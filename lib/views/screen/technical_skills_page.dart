@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
 import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 
-import '../component/resume_snackbar.dart';
+import 'package:flutter/material.dart';
 
 class technical_skills_page extends StatefulWidget {
   const technical_skills_page({Key? key}) : super(key: key);
@@ -13,17 +12,48 @@ class technical_skills_page extends StatefulWidget {
 }
 
 class _technical_skills_pageState extends State<technical_skills_page> {
-  GlobalKey<FormState> formmat = GlobalKey<FormState>();
+  @override
+  void dispose() {
+    super.dispose();
 
-  int i = allGlobalvar.technicalskill.length;
+    allGlobalvar.technicalskillController.removeWhere((element) {
+      if (element.text == "") {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    allGlobalvar.technicalskillController.forEach((element) {
+      allGlobalvar.Teskill.add("");
+      allGlobalvar.Teskill[allGlobalvar.technicalskillController.indexOf(element)] = element.text;
+    });
+
+    allGlobalvar.Teskill.removeWhere((element) => element == "");
+    if (allGlobalvar.technicalskillController.isEmpty) {
+      for (int i = 0; i < 2; i++) {
+        allGlobalvar.technicalskillController.add(TextEditingController());
+      }
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    if (allGlobalvar.technicalskillController.isEmpty) {
+      for (int i = 0; i < 2; i++) {
+        allGlobalvar.technicalskillController.add(TextEditingController());
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    Size s = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: s.height * 0.15,
         leading: const backbutton(),
+        toolbarHeight: size.height * 0.15,
         title: Text(
           "Technical Skills",
           style: AppBarTitile,
@@ -32,191 +62,78 @@ class _technical_skills_pageState extends State<technical_skills_page> {
         backgroundColor: Colors.blue,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(18),
         child: Container(
-          width: s.width,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(5),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: SingleChildScrollView(
-              child: Form(
-                key: formmat,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SizedBox(height: s.height * 0.02),
-                    const Text(
-                      "Enter Your Skills",
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.grey,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: s.height * 0.03),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextFormField(
-                            textInputAction: TextInputAction.next,
-                            initialValue: allGlobalvar.Teskill,
-                            validator: (value) {
-                              if (value != null) {
-                                return "Enter The Your Skill";
-                              } else {
-                                return null;
-                              }
-                            },
-                            onSaved: (value) {
-                              allGlobalvar.Teskill = value;
-                            },
-                            decoration: const InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 20),
-                              hintText: "C Programming, Web Technical",
-                              hintStyle: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.delete),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: s.height * 0.02),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextFormField(
-                            textInputAction: TextInputAction.next,
-                            initialValue: allGlobalvar.Teskill,
-                            validator: (value) {
-                              if (value != null) {
-                                return "Enter The Your Skill";
-                              } else {
-                                return null;
-                              }
-                            },
-                            onSaved: (value) {
-                              allGlobalvar.Teskill = value;
-                            },
-                            decoration: const InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 20),
-                              hintText: "C Programming, Web Technical",
-                              hintStyle: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            setState(() {
-                              allGlobalvar.technicalskill.remove("");
-                            });
-                          },
-                          icon: const Icon(Icons.delete),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: s.height * 0.02),
-                    ...allGlobalvar.technicalskill
-                        .map(
-                          (e) => Row(
-                            children: [
-                              Expanded(
-                                child: TextFormField(
-                                  textInputAction: TextInputAction.next,
-                                  initialValue: allGlobalvar.Teskill,
-                                  validator: (val) {
-                                    if (val!.isEmpty) {
-                                      return "Please enter address...";
-                                    } else {
-                                      return null;
-                                    }
-                                  },
-                                  onSaved: (vale) {
-                                    allGlobalvar.Teskill = vale;
-                                  },
-                                  onFieldSubmitted: (val) {
-                                    if (formmat.currentState!.validate()) {
-                                      formmat.currentState!.save();
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        allsnackBar(
-                                          text: "Successfully validated !!",
-                                          color: Colors.green,
-                                        ),
-                                      );
-                                    } else {
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        allsnackBar(
-                                          text: "Failed to validate !!",
-                                          color: Colors.red,
-                                        ),
-                                      );
-                                    }
-                                  },
-                                  decoration: const InputDecoration(
-                                    contentPadding: EdgeInsets.only(left: 20),
-                                    hintText: "C Programming, Web Technical",
-                                    hintStyle: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  setState(
-                                    () {
-                                      allGlobalvar.technicalskill.remove("");
-                                    },
-                                  );
-                                },
-                                icon: const Icon(Icons.delete),
-                              ),
-                            ],
-                          ),
-                        )
-                        .toList(),
-                    SizedBox(
-                      height: s.height * 0.04,
-                    ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                allGlobalvar.technicalskill.add("");
-                              });
-                            },
-                            child: const Icon(Icons.add),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+          padding: const EdgeInsets.all(24),
+          color: Colors.white,
+          width: size.width,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "Enter your skills",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.5,
+                  color: Colors.grey.shade600,
                 ),
               ),
-            ),
+              const SizedBox(
+                height: 15,
+              ),
+              ...List.generate(
+                allGlobalvar.technicalskillController.length,
+                (index) => MySkillTile(index: index),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          allGlobalvar.technicalskillController
+                              .add(TextEditingController());
+                        });
+                      },
+                      child: const Icon(Icons.add),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade200,
+    );
+  }
+
+  Widget MySkillTile({required int index}) {
+    return Row(
+      children: [
+        Expanded(
+          child: TextField(
+            controller: allGlobalvar.technicalskillController[index],
+            decoration: const InputDecoration(
+              hintText: "C Programming, Web",
+            ),
+          ),
+        ),
+        IconButton(
+          onPressed: () {
+            setState(() {
+              allGlobalvar.technicalskillController.removeAt(index);
+            });
+          },
+          icon: const Icon(
+            Icons.delete,
+          ),
+        ),
+      ],
     );
   }
 }
