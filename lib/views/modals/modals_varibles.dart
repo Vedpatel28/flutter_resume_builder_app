@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
+
 class allGlobalvar {
   // contact info page
 
@@ -40,13 +42,13 @@ class allGlobalvar {
 
   // Technical
 
-  static String? Teskill;
-  static List<String> technicalskill = [];
+  static List<String> Teskill = [];
+  static List<TextEditingController> technicalskillController = [];
 
   // Interest Hobbies
 
-  static String? Ihobbies;
-  static List<String> hobbies = [];
+  static List<String> Ihobbies = [];
+  static List<TextEditingController> IhobbiesController = [];
 
   // project
 
@@ -58,8 +60,8 @@ class allGlobalvar {
 
   // Achievement
 
-  static String? AcAchievement;
-  static List<String>? Achievemebnt;
+  static List<String> AcAchievement = [];
+  static List<TextEditingController> Achievemebntcontroller = [];
 
   // References
 
