@@ -679,8 +679,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
-import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 import 'package:pdf/pdf.dart';
+import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
@@ -706,85 +706,159 @@ class _resume_finel_pageState extends State<resume_finel_page> {
           alignment: pw.Alignment.center,
           decoration: pw.BoxDecoration(
             color: PdfColors.blue50,
-            // image: pw.DecorationImage(
-            //   image: image,
-            // ),
           ),
-          child: pw.Column(
-            mainAxisSize: pw.MainAxisSize.min,
-            // children: [
-            //   pw.Container(
-            //     height: 250,
-            //     width: 250,
-            //     decoration: pw.BoxDecoration(
-            //       shape: pw.BoxShape.circle,
-            //       image: pw.DecorationImage(
-            //         image: pw.MemoryImage(
-            //           File(allGlobalvar.image!.path).readAsBytesSync(),
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            //   pw.SizedBox(
-            //     height: 20,
-            //   ),
-            //   pw.SizedBox(
-            //     width: 350,
-            //     child: pw.Column(
-            //       mainAxisSize: pw.MainAxisSize.min,
-            //       children: [
-            //         pw.Row(
-            //           mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-            //           children: [
-            //             pw.Text(
-            //               "Name :",
-            //               style: pw.TextStyle(
-            //                 fontSize: 28,
-            //                 color: PdfColors.red,
-            //               ),
-            //             ),
-            //             pw.Text(
-            //               allGlobalvar.name!,
-            //               style: pw.TextStyle(
-            //                 fontSize: 28,
-            //                 color: PdfColors.red,
-            //               ),
-            //             ),
-            //           ],
-            //         ),
-            //         pw.Row(
-            //           mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
-            //           children: [
-            //             pw.Text(
-            //               "Contact :",
-            //               style: const pw.TextStyle(
-            //                 fontSize: 28,
-            //                 color: PdfColors.blue,
-            //               ),
-            //             ),
-            //             pw.Text(
-            //               "+91 ${allGlobalvar.contact!.toString()}",
-            //               style: pw.TextStyle(
-            //                 fontSize: 28,
-            //                 color: PdfColors.blue,
-            //               ),
-            //             ),
-            //           ],
-            //         ),
-            //         ...allGlobalvar.Teskill
-            //             .map(
-            //               (e) => pw.Text(
-            //             "Skill: $e",
-            //             style: pw.TextStyle(
-            //               fontSize: 26,
-            //             ),
-            //           ),
-            //         )
-            //             .toList(),
-            //       ],
-            //     ),
-            //   ),
-            // ],
+          child: pw.Row(
+            mainAxisAlignment: pw.MainAxisAlignment.start,
+            children: [
+              pw.Container(
+                width: 100,
+                height: 150,
+                color: PdfColors.amber,
+                alignment: pw.Alignment.topCenter,
+                child: pw.Padding(
+                  padding: const pw.EdgeInsets.all(10),
+                  child: pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Container(
+                        width: double.infinity,
+                        color: PdfColors.black,
+                        child: pw.Column(
+                          mainAxisSize: pw.MainAxisSize.min,
+                          children: [
+                            pw.Container(
+                              height: 250,
+                              width: 250,
+                              decoration: pw.BoxDecoration(
+                                shape: pw.BoxShape.circle,
+                                image: pw.DecorationImage(
+                                  image: pw.MemoryImage(
+                                    File(allGlobalvar.image!.path)
+                                        .readAsBytesSync(),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            pw.SizedBox(height: 10),
+                            // personal info
+                            pw.Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: const pw.BoxDecoration(
+                                borderRadius: pw.BorderRadius.vertical(
+                                  bottom: pw.Radius.circular(20),
+                                  top: pw.Radius.elliptical(15, 50),
+                                ),
+                                color: PdfColors.amber,
+                              ),
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "Personal Info",
+                                style: pw.TextStyle(
+                                    color: PdfColors.black,
+                                    fontSize: 20,
+                                    fontWeight: pw.FontWeight.bold),
+                              ),
+                            ),
+                            // name
+                            pw.Text(
+                              "\n Name     : ${allGlobalvar.name}",
+                            ),
+                            // e-mail
+                            pw.Text(
+                              " E-Mail    : ${allGlobalvar.email}",
+                            ),
+                            // contact
+                            pw.Text(
+                              " Contact  : ${allGlobalvar.contact}",
+                            ),
+                            // address
+                            pw.Text(
+                              " Address : ${allGlobalvar.ad1}",
+                            ),
+                            pw.SizedBox(height: 20),
+                            // personal Details
+                            pw.Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: const pw.BoxDecoration(
+                                borderRadius: pw.BorderRadius.vertical(
+                                  bottom: pw.Radius.circular(20),
+                                  top: pw.Radius.elliptical(15, 50),
+                                ),
+                                color: PdfColors.amber,
+                              ),
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "Personal Details",
+                                style: pw.TextStyle(
+                                  color: PdfColors.black,
+                                  fontSize: 20,
+                                  fontWeight: pw.FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            // DOB
+                            pw.Text(
+                              "\n DOB              : ${allGlobalvar.dob}",
+                            ),
+                            // Merital
+                            pw.Text(
+                              " Marital         : ${allGlobalvar.Merital}",
+                            ),
+                            // Languages
+                            pw.Text(
+                              " Languages  : ${allGlobalvar.Languages}",
+                            ),
+                            // Nationality
+                            pw.Text(
+                              " Nationality  : ${allGlobalvar.nationality}",
+                            ),
+                            pw.SizedBox(height: 2),
+                            // Education Details
+                            pw.Container(
+                              height: 50,
+                              width: double.infinity,
+                              decoration: const pw.BoxDecoration(
+                                borderRadius: pw.BorderRadius.vertical(
+                                  bottom: pw.Radius.circular(20),
+                                  top: pw.Radius.elliptical(15, 50),
+                                ),
+                              ),
+                              alignment: pw.Alignment.center,
+                              child: pw.Text(
+                                "Education Details",
+                                style: pw.TextStyle(
+                                    color: PdfColors.black,
+                                    fontSize: 20,
+                                    fontWeight: pw.FontWeight.bold),
+                              ),
+                            ),
+                            pw.SizedBox(height: 2),
+                            // Course / Degree
+                            pw.Text(
+                              " Course  : ${allGlobalvar.Edcoursordegree}",
+                            ),
+                            // school/college/institute
+                            pw.Text(
+                              " College Name  : ${allGlobalvar.Edsci1}",
+                            ),
+                            // school/college/institute CGPA
+                            pw.Text(
+                              " College CGPA  : ${allGlobalvar.Edsci2}",
+                            ),
+                            // Year of Pass
+                            pw.Text(
+                              " Passing Year : ${allGlobalvar.Edpasstime}",
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

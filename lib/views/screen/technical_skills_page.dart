@@ -25,7 +25,9 @@ class _technical_skills_pageState extends State<technical_skills_page> {
     });
     allGlobalvar.technicalskillController.forEach((element) {
       allGlobalvar.Teskill.add("");
-      allGlobalvar.Teskill[allGlobalvar.technicalskillController.indexOf(element)] = element.text;
+      allGlobalvar
+              .Teskill[allGlobalvar.technicalskillController.indexOf(element)] =
+          element.text;
     });
 
     allGlobalvar.Teskill.removeWhere((element) => element == "");
@@ -67,44 +69,46 @@ class _technical_skills_pageState extends State<technical_skills_page> {
           padding: const EdgeInsets.all(24),
           color: Colors.white,
           width: size.width,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                "Enter your skills",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.5,
-                  color: Colors.grey.shade600,
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              ...List.generate(
-                allGlobalvar.technicalskillController.length,
-                (index) => MySkillTile(index: index),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          allGlobalvar.technicalskillController
-                              .add(TextEditingController());
-                        });
-                      },
-                      child: const Icon(Icons.add),
-                    ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Enter your skills",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5,
+                    color: Colors.grey.shade600,
                   ),
-                ],
-              ),
-            ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                ...List.generate(
+                  allGlobalvar.technicalskillController.length,
+                  (index) => MySkillTile(index: index),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            allGlobalvar.technicalskillController
+                                .add(TextEditingController());
+                          });
+                        },
+                        child: const Icon(Icons.add),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -116,7 +120,8 @@ class _technical_skills_pageState extends State<technical_skills_page> {
     return Row(
       children: [
         Expanded(
-          child: TextField(
+          child: TextFormField(
+            textInputAction: TextInputAction.next,
             controller: allGlobalvar.technicalskillController[index],
             decoration: const InputDecoration(
               hintText: "C Programming, Web",
