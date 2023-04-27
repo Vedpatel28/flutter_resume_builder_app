@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/routes_utils.dart';
 import 'package:flutter_resume_builder_app/views/screen/achievements_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/carrier_objective_page.dart';
-import 'package:flutter_resume_builder_app/views/screen/declaration_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/educyion_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/experiences_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/interest_hobbies_page.dart';
