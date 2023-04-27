@@ -17,7 +17,7 @@ class declaration_page_select extends StatefulWidget {
 class _declaration_page_selectState extends State<declaration_page_select> {
   GlobalKey<FormState> formmat = GlobalKey<FormState>();
 
-  bool onoffswi = true;
+  bool onoffswi = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,6 @@ class _declaration_page_selectState extends State<declaration_page_select> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Container(
-          height: s.height * 0.63,
           width: s.width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
@@ -50,7 +49,7 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 key: formmat,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Row(
                       children: [
@@ -64,191 +63,207 @@ class _declaration_page_selectState extends State<declaration_page_select> {
                           onChanged: (value) {
                             setState(() {
                               onoffswi = value;
-                              value == false
-                                  ? Navigator.of(context)
-                                      .pushNamed("declaration_page")
-                                  : Navigator.of(context).pop();
                             });
                           },
                         ),
                       ],
                     ),
-                    SizedBox(height: s.height * 0.01),
-                    Icon(Icons.radar, size: s.height * 0.1),
-                    SizedBox(height: s.height * 0.04),
-                    TextFormField(
-                      initialValue: allGlobalvar.DedeclarationDescripation,
-                      textInputAction: TextInputAction.next,
-                      validator: (value) {
-                        if (value != null) {
-                          return "Enter The Descripation";
-                        } else {
-                          return null;
-                        }
-                      },
-                      onSaved: (value) {
-                        allGlobalvar.DedeclarationDescripation = value;
-                      },
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        contentPadding: const EdgeInsets.all(10),
-                        hintText: "Descripation",
-                        hintStyle:
-                            const TextStyle(color: Colors.grey, fontSize: 18),
-                      ),
-                    ),
-                    SizedBox(height: s.height * 0.04),
-                    Container(
-                      height: 2,
-                      width: s.width,
-                      color: Colors.grey.shade400,
-                    ),
-                    SizedBox(height: s.height * 0.02),
-                    Row(
-                      children: [
-                        Container(
-                          height: s.height * 0.17,
-                          width: s.width * 0.38,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Date",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                    (onoffswi)
+                        ? Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(Icons.radar, size: s.height * 0.1),
+                              SizedBox(height: s.height * 0.04),
+                              TextFormField(
+                                initialValue:
+                                    allGlobalvar.DedeclarationDescripation,
+                                textInputAction: TextInputAction.next,
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return "Enter The Descripation";
+                                  } else {
+                                    return null;
+                                  }
+                                },
+                                onSaved: (value) {
+                                  allGlobalvar.DedeclarationDescripation =
+                                      value;
+                                },
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
+                                  contentPadding: const EdgeInsets.all(10),
+                                  hintText: "Descripation",
+                                  hintStyle: const TextStyle(
+                                      color: Colors.grey, fontSize: 18),
                                 ),
-                                Spacer(),
-                                TextFormField(
-                                  initialValue:
-                                      (allGlobalvar.Dedateofdeclartion == null)
-                                          ? null
-                                          : allGlobalvar.Dedateofdeclartion
-                                              .toString(),
-                                  validator: (value) {
-                                    if (value!.isEmpty) {
-                                      return "Enter The Date";
-                                    } else {
-                                      return null;
-                                    }
-                                  },
-                                  onSaved: (value) {
-                                    allGlobalvar.Dedateofdeclartion =
-                                        int.parse(value!);
-                                  },
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5),
+                              ),
+                              SizedBox(height: s.height * 0.04),
+                              Container(
+                                height: 2,
+                                width: s.width,
+                                color: Colors.grey.shade400,
+                              ),
+                              SizedBox(height: s.height * 0.02),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: s.height * 0.17,
+                                    width: s.width * 0.38,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
                                     ),
-                                    contentPadding: EdgeInsets.only(left: 10),
-                                    hintText: "DD/MM/YYYY",
-                                    hintStyle: TextStyle(
-                                      color: Colors.grey.shade400,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: s.width * .01),
-                        Container(
-                          height: s.height * 0.17,
-                          width: s.width * 0.38,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Column(
-                              // crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Place(Interview\nvenue/city)",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Spacer(),
-                                TextFormField(
-                                  initialValue: allGlobalvar.Deplacedeclaration,
-                                  validator: (value) {
-                                    if (value != null) {
-                                      return "Enter The Place";
-                                    } else {
-                                      return null;
-                                    }
-                                  },
-                                  onSaved: (value) {
-                                    allGlobalvar.Deplacedeclaration = value;
-                                  },
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                    contentPadding: EdgeInsets.only(left: 10),
-                                    hintText: "Eg. Surat",
-                                    hintStyle: TextStyle(
-                                      color: Colors.grey.shade400,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const Text(
+                                            "Date",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          TextFormField(
+                                            initialValue: (allGlobalvar
+                                                        .Dedateofdeclartion ==
+                                                    null)
+                                                ? null
+                                                : allGlobalvar
+                                                        .Dedateofdeclartion
+                                                    .toString(),
+                                            validator: (value) {
+                                              if (value!.isEmpty) {
+                                                return "Enter The Date";
+                                              } else {
+                                                return null;
+                                              }
+                                            },
+                                            onSaved: (value) {
+                                              allGlobalvar.Dedateofdeclartion =
+                                                  int.parse(value!);
+                                            },
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5),
+                                              ),
+                                              contentPadding:
+                                                  EdgeInsets.only(left: 10),
+                                              hintText: "DD/MM/YYYY",
+                                              hintStyle: TextStyle(
+                                                color: Colors.grey.shade400,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: s.height * 0.008,
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              if (formmat.currentState!.validate()) {
-                                formmat.currentState!.save();
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  allsnackBar(
-                                    text: "Successfully validated !!",
-                                    color: Colors.green,
+                                  SizedBox(width: s.width * .01),
+                                  Container(
+                                    height: s.height * 0.17,
+                                    width: s.width * 0.38,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Column(
+                                        // crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          const Text(
+                                            "Place(Interview\nvenue/city)",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Spacer(),
+                                          TextFormField(
+                                            initialValue:
+                                                allGlobalvar.Deplacedeclaration,
+                                            validator: (value) {
+                                              if (value!.isEmpty) {
+                                                return "Enter The Place";
+                                              } else {
+                                                return null;
+                                              }
+                                            },
+                                            onSaved: (value) {
+                                              allGlobalvar.Deplacedeclaration =
+                                                  value;
+                                            },
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(5),
+                                              ),
+                                              contentPadding:
+                                                  EdgeInsets.only(left: 10),
+                                              hintText: "Eg. Surat",
+                                              hintStyle: TextStyle(
+                                                color: Colors.grey.shade400,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                );
-                              } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  allsnackBar(
-                                    text: "Failled to validate !!",
-                                    color: Colors.red,
+                                ],
+                              ),
+                              SizedBox(
+                                height: s.height * 0.008,
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        if (formmat.currentState!.validate()) {
+                                          formmat.currentState!.save();
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            allsnackBar(
+                                              text: "Successfully validated !!",
+                                              color: Colors.green,
+                                            ),
+                                          );
+                                        } else {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            allsnackBar(
+                                              text: "Failled to validate !!",
+                                              color: Colors.red,
+                                            ),
+                                          );
+                                        }
+                                      });
+                                    },
+                                    child: const Text(
+                                      "SAVE",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
+                                    ),
                                   ),
-                                );
-                              }
-                            });
-                          },
-                          child: const Text(
-                            "SAVE",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                                ],
+                              ),
+                            ],
+                          )
+                        : SizedBox(),
                   ],
                 ),
               ),

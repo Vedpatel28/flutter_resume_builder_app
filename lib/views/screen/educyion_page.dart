@@ -113,7 +113,7 @@ class _educyion_pageState extends State<educyion_page> {
                       textInputAction: TextInputAction.next,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          Text("Enter PR. !!");
+                          const Text("Enter PR. !!");
                         } else {
                           return null;
                         }

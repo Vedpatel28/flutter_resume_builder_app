@@ -50,7 +50,8 @@ class MyApp extends StatelessWidget {
         allroutes.buildoption[7].route: (context) => const projects_page(),
         allroutes.buildoption[8].route: (context) => const achievements_page(),
         allroutes.buildoption[9].route: (context) => const references_page(),
-        allroutes.buildoption[10].route: (context) => const declaration_page(),
+        allroutes.buildoption[10].route: (context) =>
+            const declaration_page_select(),
       },
     );
   }
