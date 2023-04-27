@@ -69,7 +69,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         }
                       },
                       onSaved: (val) {
-                        allGlobalvar.dob = val! ;
+                        allGlobalvar.dob = val!;
                       },
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -127,7 +127,7 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                         );
                       },
                     ),
-                    Text("Languages Known", style: titeltext),
+                    Text("allLanguages Known", style: titeltext),
                     CheckboxListTile(
                       title: const Text("English"),
                       controlAffinity: ListTileControlAffinity.leading,
@@ -135,10 +135,10 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                       onChanged: (val) {
                         setState(
                           () {
-                            (val = true)
-                                ? allGlobalvar.Languages = "English"
-                                : null;
                             chackboxone = val!;
+                            (val = true)
+                                ? allGlobalvar.allLanguages.add("English")
+                                : allGlobalvar.allLanguages.remove("English");
                           },
                         );
                       },
@@ -150,10 +150,10 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                       onChanged: (vale) {
                         setState(
                           () {
-                            (vale = true)
-                                ? allGlobalvar.Languages = "Hindi"
-                                : null;
                             chackboxtwo = vale!;
+                            (vale = true)
+                                ? allGlobalvar.allLanguages.add("Hindi")
+                                : allGlobalvar.allLanguages.remove("Hindi");
                           },
                         );
                       },
@@ -165,10 +165,10 @@ class _peronal_details_pageState extends State<peronal_details_page> {
                       onChanged: (value) {
                         setState(
                           () {
-                            (value = true)
-                                ? allGlobalvar.Languages = "Gujarati"
-                                : null;
                             chackboxthree = value!;
+                            (value = true)
+                                ? allGlobalvar.allLanguages.add("Gujarati")
+                                : allGlobalvar.allLanguages.remove("Gujarati");
                           },
                         );
                       },

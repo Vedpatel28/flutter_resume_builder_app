@@ -21,7 +21,7 @@ class allGlobalvar {
 
   static String? dob;
   static String? Merital;
-  static String? Languages;
+  static List<String> allLanguages = [];
   static String? nationality;
 
   // Education
