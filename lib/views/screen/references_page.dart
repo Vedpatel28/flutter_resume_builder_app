@@ -55,8 +55,9 @@ class _references_pageState extends State<references_page> {
                     ),
                     TextFormField(
                       initialValue: allGlobalvar.ReReferencesname,
+                      textInputAction: TextInputAction.next,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Name";
                         } else {
                           return null;
@@ -85,8 +86,9 @@ class _references_pageState extends State<references_page> {
                     ),
                     TextFormField(
                       initialValue: allGlobalvar.ReDesigenation,
+                      textInputAction: TextInputAction.next,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Designation";
                         } else {
                           return null;
@@ -115,8 +117,9 @@ class _references_pageState extends State<references_page> {
                     ),
                     TextFormField(
                       initialValue: allGlobalvar.ReOrganization,
+                      textInputAction: TextInputAction.next,
                       validator: (value) {
-                        if (value != null) {
+                        if (value!.isEmpty) {
                           return "Enter The Institute";
                         } else {
                           return null;
@@ -125,14 +128,13 @@ class _references_pageState extends State<references_page> {
                       onSaved: (newValue) {
                         allGlobalvar.ReOrganization = newValue;
                       },
-                      onFieldSubmitted: (val) {
+                      onFieldSubmitted: (value) {
                         if (formmat.currentState!.validate()) {
                           formmat.currentState!.save();
                           ScaffoldMessenger.of(context).showSnackBar(
                             allsnackBar(
-                              text: "Successfully validated !!",
-                              color: Colors.green,
-                            ),
+                                text: "Successful Validated!!",
+                                color: Colors.green),
                           );
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(

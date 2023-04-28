@@ -8,6 +8,7 @@ import 'package:flutter_resume_builder_app/views/screen/interest_hobbies_page.da
 import 'package:flutter_resume_builder_app/views/screen/peronal_details_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/projects_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/references_page.dart';
+import 'package:flutter_resume_builder_app/views/screen/resume_secend_page.dart';
 import 'package:flutter_resume_builder_app/views/screen/technical_skills_page.dart';
 import 'views/screen/contact_info_page.dart';
 import 'views/screen/declaration_after_select_page.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         allroutes.selectdeclaration: (context) =>
             const declaration_page_select(),
         allroutes.finel: (context) => const resume_finel_page(),
+        allroutes.finelsecend: (context) => const resume_secend_page(),
         allroutes.buildoption[0].route: (context) => const contact_info_page(),
         allroutes.buildoption[1].route: (context) =>
             const carrier_objective_page(),

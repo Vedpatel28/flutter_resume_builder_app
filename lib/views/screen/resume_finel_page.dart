@@ -38,7 +38,6 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                 child: pw.Stack(
                   children: [
                     pw.Expanded(
-                      flex: 1,
                       child: pw.Row(
                         children: [
                           pw.Container(
@@ -317,14 +316,14 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                                   crossAxisAlignment:
                                       pw.CrossAxisAlignment.start,
                                   children: [
-                                    pw.SizedBox(height: 20),
+                                    pw.SizedBox(height: 5),
                                     pw.Container(
                                       width: 300,
-                                      height: 60,
+                                      height: 50,
                                       decoration: const pw.BoxDecoration(
                                         color: PdfColors.black,
                                         borderRadius: pw.BorderRadius.only(
-                                          bottomRight: pw.Radius.circular(0),
+                                          bottomRight: pw.Radius.circular(5),
                                           topRight: pw.Radius.circular(50),
                                         ),
                                       ),
@@ -333,26 +332,196 @@ class _resume_finel_pageState extends State<resume_finel_page> {
                                         "   Carrier Objective",
                                         style: pw.TextStyle(
                                           color: PdfColors.amber,
-                                          fontSize: 20,
+                                          fontSize: 22,
                                           fontWeight: pw.FontWeight.bold,
                                         ),
                                       ),
                                     ),
-                                    pw.SizedBox(width: 10),
                                     pw.Container(
                                       width: 280,
                                       child: pw.Stack(
                                         children: [
                                           pw.Column(
-                                            mainAxisAlignment: pw.MainAxisAlignment.start,
-                                            crossAxisAlignment: pw.CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                pw.MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                pw.CrossAxisAlignment.start,
                                             children: [
-                                              pw.Text("\n${allGlobalvar.CareerobjectveDescripation}",style: const pw.TextStyle(
-                                                color: PdfColors.black,fontSize: 18,
-                                              ),),
-                                              pw.Text("\nDesignation : ${allGlobalvar.carrierexperirncedcandidate}",style: const pw.TextStyle(
-                                                color: PdfColors.black,fontSize: 18,
-                                              ),),
+                                              pw.Text(
+                                                "\n ${allGlobalvar.CareerobjectveDescripation}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Designation : ${allGlobalvar.carrierexperirncedcandidate}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.SizedBox(height: 5),
+                                              pw.Container(
+                                                width: 300,
+                                                height: 50,
+                                                decoration: const pw.BoxDecoration(
+                                                  color: PdfColors.black,
+                                                  borderRadius: pw.BorderRadius.only(
+                                                    bottomRight: pw.Radius.circular(5),
+                                                    topRight: pw.Radius.circular(50),
+                                                  ),
+                                                ),
+                                                alignment: pw.Alignment.centerLeft,
+                                                child: pw.Text(
+                                                  "   experiences",
+                                                  style: pw.TextStyle(
+                                                    color: PdfColors.amber,
+                                                    fontSize: 22,
+                                                    fontWeight: pw.FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Com. Name : ${allGlobalvar.Excompany}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n College Name : ${allGlobalvar.Exsccoin}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Roles : ${allGlobalvar.Exexperiencesroles}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Status : ${allGlobalvar.Exemploy}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Join Date : ${allGlobalvar.Exdatejoin}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Exit Date : ${allGlobalvar.Exdateexit}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.SizedBox(height: 5),
+                                              pw.Container(
+                                                width: 300,
+                                                height: 50,
+                                                decoration: const pw.BoxDecoration(
+                                                  color: PdfColors.black,
+                                                  borderRadius: pw.BorderRadius.only(
+                                                    bottomRight: pw.Radius.circular(5),
+                                                    topRight: pw.Radius.circular(50),
+                                                  ),
+                                                ),
+                                                alignment: pw.Alignment.centerLeft,
+                                                child: pw.Text(
+                                                  "   Projects",
+                                                  style: pw.TextStyle(
+                                                    color: PdfColors.amber,
+                                                    fontSize: 22,
+                                                    fontWeight: pw.FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Pro. Title : ${allGlobalvar.Prprojecttitle}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Technologies : ${allGlobalvar.Prtechnologies}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Roles : ${allGlobalvar.Prprojectroles}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Technologies : ${allGlobalvar.Prtecprogrammer}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Pro. Desc. : ${allGlobalvar.PrproDescripation}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.SizedBox(height: 5),
+                                              pw.Container(
+                                                width: 300,
+                                                height: 50,
+                                                decoration: const pw.BoxDecoration(
+                                                  color: PdfColors.black,
+                                                  borderRadius: pw.BorderRadius.only(
+                                                    bottomRight: pw.Radius.circular(5),
+                                                    topRight: pw.Radius.circular(50),
+                                                  ),
+                                                ),
+                                                alignment: pw.Alignment.centerLeft,
+                                                child: pw.Text(
+                                                  "   References",
+                                                  style: pw.TextStyle(
+                                                    color: PdfColors.amber,
+                                                    fontSize: 22,
+                                                    fontWeight: pw.FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Ref. Name : ${allGlobalvar.ReReferencesname}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Designation : ${allGlobalvar.ReDesigenation}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                              pw.Text(
+                                                "\n Institute : ${allGlobalvar.ReDesigenation}",
+                                                style: const pw.TextStyle(
+                                                  color: PdfColors.black,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ],

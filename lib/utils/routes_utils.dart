@@ -20,6 +20,7 @@ class allroutes {
   static String contactincontact = 'contactin_contact_page';
   static String contactinphoto = 'contactin_photo_page';
   static String finel = 'resume_finel_page';
+  static String finelsecend = 'resume_secend_page';
   static List<Buildoption> buildoption = [
     Buildoption(
         icon: "${iconePath}contact-books.png",

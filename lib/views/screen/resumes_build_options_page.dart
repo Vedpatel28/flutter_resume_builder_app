@@ -39,6 +39,18 @@ class _resumes_build_options_pageState
               size: s.height*0.035,
             ),
           ),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                Navigator.of(context).pushNamed(allroutes.finelsecend);
+              });
+            },
+            child: Icon(
+              Icons.picture_as_pdf_outlined,
+              color: Colors.white,
+              size: s.height*0.035,
+            ),
+          ),
           Icon(
             Icons.add,
             color: Colors.transparent,
