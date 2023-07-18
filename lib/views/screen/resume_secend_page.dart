@@ -1,10 +1,8 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_resume_builder_app/utils/back_button_icon.dart';
 import 'package:flutter_resume_builder_app/utils/theme_utils.dart';
 import 'package:pdf/pdf.dart';
-import 'package:flutter_resume_builder_app/views/modals/modals_varibles.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
@@ -31,33 +29,40 @@ class _resume_secend_pageState extends State<resume_secend_page> {
           ),
           child: pw.Column(
             children: [
-              pw.Column(children: [
-                pw.Stack(
-                  children: [
-                    pw.Column(
-                      children: [
-                        pw.SizedBox(height: 100),
-                        pw.Container(
-                          width: double.infinity,
-                          height: 150,
-                          color: PdfColors.purple200,
-                        ),
-                      ],
-                    ),
-                    pw.Row(
-                      children: [
-                        pw.SizedBox(width: 50),
-                        pw.Container(
-                            width: 150,
+              pw.Column(
+                children: [
+                  pw.Stack(
+                    children: [
+                      pw.Stack(
+                        children: [
+                          pw.Column(
+                            children: [
+                              pw.SizedBox(height: 50),
+                              pw.Container(
+                                width: double.infinity,
+                                height: 180,
+                                color: PdfColors.purple200,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      pw.Row(
+                        children: [
+                          pw.SizedBox(width: 50),
+                          pw.Container(
+                            width: 180,
                             height: 841,
                             decoration: const pw.BoxDecoration(
                               color: PdfColors.purple200,
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
-              ])
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
